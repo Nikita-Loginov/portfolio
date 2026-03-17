@@ -1,0 +1,70 @@
+@use "sass:math";
+
+:root {
+  --gray-color-0: #ffffff;
+  --gray-color-50: #e1e1e1;
+  --gray-color-100: #5c5067;
+  --gray-color-200: #28212f;
+
+  --dark-color-0: #0a0311;
+
+  --font-family-main: "Eurostile-Roman", sans-serif;
+  --font-family-second: "Digital dream Skew Narrow", sans-serif;
+
+  --weight-font-main: 400;
+  --weight-font-md: 500;
+
+  --font-size-xxl: 64px;
+  --font-size-xl: 40px;
+  --font-size-lg: 32px;
+  --font-size-md: 28px;
+  --font-size-base: 24px;
+  --font-size-sm: 16px;
+  --font-size-xs: 14px;
+
+  --line-height-base: 1;
+  --line-height-tighter: 1.2;
+  --line-height-tight: 1.3;
+  --line-height-md: 1.4;
+  --line-height-relaxed: 1.5;
+
+  --container-inline-padding: 40px;
+
+  --container-max-width: calc(
+    1840px + (calc(var(--container-inline-padding) * 2))
+  );
+
+  --calback-header-height: 116px;
+
+  --gap-blocks: 40px;
+}
+
+$desktop-breakpoint: 1439px;
+$md-desktop-breakpoint: 1279px;
+$lg-breakpoint: 1023px;
+$tablet-breakpoint: 767px;
+$mobile-breakpoint: 479px;
+
+@function vw($px) {
+  $result: math.div($px, 1920) * 100 + vw;
+
+  @return $result;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  :root {
+    --font-size-xxl: #{vw(64)};
+    --font-size-xl: #{vw(40)};
+    --font-size-lg: #{vw(32)};
+    --font-size-md: #{vw(28)};
+    --font-size-base: #{vw(24)};
+    --font-size-sm: #{vw(16)};
+    --font-size-xs: #{vw(14)};
+    --container-inline-padding: #{vw(40)};
+    --container-max-width: calc(
+      #{vw(1840)} + (var(--container-inline-padding) * 2)
+    );
+    --calback-header-height: #{vw(116)};
+    --gap-blocks: #{vw(40)};
+  }
+}

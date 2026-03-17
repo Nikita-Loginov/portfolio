@@ -1,0 +1,35 @@
+h1,
+.h1 {
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-tighter);
+}
+
+h2,
+.h2 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tighter);
+}
+
+h3,
+.h3 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tighter);
+}
+
+h4,
+.h4 {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-tighter);
+}
+
+.p1 {
+  font-size: var(--font-size-base);
+}
+
+.p2 {
+  font-size: var(--font-size-sm);
+}
+
+.p3 {
+  font-size: var(--font-size-xs);
+}
