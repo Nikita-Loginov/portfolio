@@ -12,16 +12,8 @@
 }
 // calculate-clamp(200px, 300px, $lg-breakpoint, $tablet-breakpoint)
 
-@mixin visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  pointer-events: none;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  visibility: hidden;
-  border: 0;
+@function vw($px) {
+  $result: math.div($px, 1439) * 100 + vw;
+
+  @return $result;
 }

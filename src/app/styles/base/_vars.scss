@@ -1,4 +1,5 @@
-@use "sass:math";
+@use "./breakpoints" as *;
+@use "./helpers" as *;
 
 :root {
   --gray-color-0: #ffffff;
@@ -28,6 +29,22 @@
   --line-height-md: 1.4;
   --line-height-relaxed: 1.5;
 
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
+  --radius-4xl: 28px;
+  --radius-5xl: 32px;
+
+  --icon-sm: 16px;
+  --icon-base: 20px;
+  --icon-md: 24px;
+
+  --transition-base: 0.3s;
+
   --container-inline-padding: 40px;
 
   --container-max-width: calc(
@@ -37,18 +54,6 @@
   --calback-header-height: 116px;
 
   --gap-blocks: 40px;
-}
-
-$desktop-breakpoint: 1439px;
-$md-desktop-breakpoint: 1279px;
-$lg-breakpoint: 1023px;
-$tablet-breakpoint: 767px;
-$mobile-breakpoint: 479px;
-
-@function vw($px) {
-  $result: math.div($px, 1920) * 100 + vw;
-
-  @return $result;
 }
 
 @media (min-width: $desktop-breakpoint) {
@@ -66,5 +71,17 @@ $mobile-breakpoint: 479px;
     );
     --calback-header-height: #{vw(116)};
     --gap-blocks: #{vw(40)};
+    --radius-sm: #{vw(4)};
+    --radius-base: #{vw(8)};
+    --radius-md: #{vw(12)};
+    --radius-lg: #{vw(14)};
+    --radius-xl: #{vw(16)};
+    --radius-2xl: #{vw(20)};
+    --radius-3xl: #{vw(24)};
+    --radius-4xl: #{vw(28)};
+    --radius-5xl: #{vw(32)};
+    --icon-sm: #{vw(16)};
+    --icon-base: #{vw(20)};
+    --icon-md: #{vw(24)};
   }
 }

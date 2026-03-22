@@ -1,0 +1,28 @@
+.page-background {
+  width: 100%;
+  height: 100%;
+
+  &__box {
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+}

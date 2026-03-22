@@ -1,5 +1,6 @@
-@import url(./base/_reset.scss);
-@import url(./base/_helpers.scss);
-@import url(./base/_vars.scss);
-@import url(./base/_global.scss);
-@import url(./base/_text.scss);
+@use "./base/reset";
+@use "./base/helpers";
+@use "./base/vars" as *;
+@use "./base/fonts";
+@use "./base/global";
+@use "./base/text";
