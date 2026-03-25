@@ -11,6 +11,9 @@
   left: 0;
   right: 0;
   padding-top: var(--header-padding-top);
+  // background-color: var(--dark-color-1);
+  // backdrop-filter: blur(10px);
+  // padding-bottom: 4px;
 
   &__inner {
     display: flex;

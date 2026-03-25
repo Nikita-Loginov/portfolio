@@ -1,0 +1,27 @@
+.tooltip {
+  --tooltip-max-width: 300px;
+  --tooltip-padding: 8px 8px;
+
+  max-width: var(--tooltip-max-width);
+
+  :global(.ant-tooltip-container) {
+    font-size: var(--font-size-xs);
+    background-color: var(--dark-color-0);
+    padding: var(--tooltip-padding);
+    font-family: var(--font-family-main);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --tooltip-max-width: #{vw(300)};
+    --tooltip-padding: #{vw(8)} #{vw(8)};
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  :global(.ant-tooltip) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}

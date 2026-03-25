@@ -1,0 +1,68 @@
+.menu {
+  --menu-gap: 20px;
+  --menu-box-gap: 20px;
+  --menu-list-gap: 10px;
+  --menu-link-gap: 8px;
+  --menu-item-min-height: 35px;
+  --menu-item-padding: 2px 12px;
+  --menu-item-gap: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: var(--menu-gap);
+  margin: 0 auto;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--menu-box-gap);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--menu-list-gap);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--menu-link-gap);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--menu-item-gap);
+    color: var(--gray-color-0);
+    border-radius: var(--radius-md);
+    min-height: var(--menu-item-min-height);
+    padding: var(--menu-item-padding);
+    backdrop-filter: blur(13px);
+    background-color: var(--gray-color-4);
+    transition: color var(--transition-base),
+      background-color var(--transition-base), transform var(--transition-base);
+
+    &:active {
+      transform: scale(0.92);
+    }
+
+    &:hover,
+    &.active {
+      background-color: var(--gray-color-0);
+      color: var(--dark-color-0);
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --menu-gap: #{vw(20)};
+    --menu-box-gap: #{vw(20)};
+    --menu-list-gap: #{vw(10)};
+    --menu-link-gap: #{vw(8)};
+    --menu-item-min-height: #{vw(35)};
+    --menu-item-padding: #{vw(2)} #{vw(12)};
+    --menu-item-gap: #{vw(8)};
+  }
+}

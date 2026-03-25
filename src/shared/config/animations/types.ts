@@ -23,6 +23,7 @@ export interface LiquidEtherConfig {
 }
 
 export interface ImgBgConfig {
-  src: StaticImageData,
-  alt: string
+  path: string;
+  src: StaticImageData;
+  alt: string;
 }

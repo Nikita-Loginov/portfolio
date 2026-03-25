@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
     additionalData: `
       @use "@/app/styles/base/breakpoints" as *;
       @use "@/app/styles/base/helpers" as *;
-    `
+    `,
   },
-  turbopack: {
-    root: process.cwd(),
-  },
+  devIndicators: {
+    buildActivity: false,
+  } as NextConfig["devIndicators"] & { buildActivity: boolean },
 };
 
 export default nextConfig;

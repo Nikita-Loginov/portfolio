@@ -30,11 +30,17 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  padding-top: calc(var(--header-height, var(--calback-header-height)) + 10px);
 
   section {
-    &:not(:last-child) {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+
+    // &:not(:last-child) {
       margin-bottom: var(--gap-blocks);
-    }
+    // }
   }
 }
 
@@ -74,4 +80,8 @@ body {
     width: var(--icon-md);
     height: var(--icon-md);
   }
+}
+
+nextjs-portal {
+  display: none !important;
 }

@@ -3,4 +3,7 @@ export * from "./config/animations";
 export * from "./ui/animations/LiquidEther";
 export * from "./ui/container/Container";
 export * from "./ui/header/Header";
-export * from './ui/buttons/Button/Button'
+export * from "./ui/buttons/Button/Button";
+export * from "./ui/toltips/Tooltip";
+export * from "./ui/footer/Footer";
+export * from './ui/menu/Menu'

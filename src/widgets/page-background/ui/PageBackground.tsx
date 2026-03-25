@@ -13,7 +13,7 @@ import scss from "./PageBackground.module.scss";
 interface PageBackgroundProps {
   config: LiquidEtherConfig;
   imageConfig: ImgBgConfig;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const PageBackground = ({
@@ -24,7 +24,7 @@ export const PageBackground = ({
   return (
     <div className={scss["page-background"]}>
       <div className={scss["page-background__box"]}>
-        {/* <LiquidEther {...config} /> */}
+        <LiquidEther {...config} />
       </div>
 
       <div className={scss["page-background__img"]}>

@@ -1,4 +1,4 @@
-import { Tooltip } from "antd";
+import { Tooltip } from "../../toltips/Tooltip";
 
 import classNames from "classnames";
 import Link from "next/link";
