@@ -10,7 +10,13 @@ export const LiquidConfigs = [
   },
   {
     path: '/about',
-    colors: ["#8f0ee6"],
+    colors: ["#d4bc0d"],
+    autoSpeed: 1.0,
+    isViscous: true,
+  },
+  {
+    path: '/skills',
+    colors: ["#0cc288"],
     autoSpeed: 1.0,
     isViscous: true,
   }
@@ -26,5 +32,10 @@ export const ImgsBg: ImgBgConfig[] = [
     path: '/about',
     src: Images.BackgroundAbout,
     alt: 'Фотография фона для страницы "О нас"',
+  },
+  {
+    path: '/skills',
+    src: Images.BackgroundSkills,
+    alt: 'Фотография фона для страницы "Мои навыки"',
   }
 ]

@@ -4,6 +4,8 @@ import Link from "next/link";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
 
+import { Tooltip } from "../toltips/Tooltip";
+
 import { MENU_ITEMS } from "./config/menu-items.config";
 
 import scss from "./Menu.module.scss";
@@ -27,14 +29,16 @@ export const Menu = ({ className }: MenuProps) => {
 
             return (
               <li className={scss["menu__link"]} key={item.to}>
-                <Link
-                  href={item.to}
-                  className={classNames(scss["menu__item"], {
-                    [scss.active]: isActive,
-                  })}
-                >
-                  <p className="p2">{item.title}</p>
-                </Link>
+                <Tooltip title={`Перейти на страницу "${item.title}"`}>
+                  <Link
+                    href={item.to}
+                    className={classNames(scss["menu__item"], {
+                      [scss.active]: isActive,
+                    })}
+                  >
+                    <p className="p2">{item.title}</p>
+                  </Link>
+                </Tooltip>
               </li>
             );
           })}

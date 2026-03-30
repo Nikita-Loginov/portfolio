@@ -1,0 +1,67 @@
+.card-about {
+  --card-about-padding: 40px 16px 6px;
+  --card-about-min-height: 142px;
+  --card-about-gap: 20px;
+
+  text-align: center;
+  padding: var(--card-about-padding);
+  min-height: var(--card-about-min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  min-height: 100%;
+  gap: var(--card-about-gap);
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    --card-about-padding: 40px 16px;
+
+    .card-about {
+      &__question {
+        grid-template-rows: 1fr;
+      }
+
+      &__dots {
+        max-height: 0;
+        transition: all var(--transition-base);
+      }
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+      --card-about-padding: #{vw(40)} #{vw(16)} #{vw(6)};
+    }
+  }
+
+  &__dots {
+    text-align: center;
+    max-height: 100px;
+    transition: all 1s 1s;
+    color: var(--gray-color-100);
+    overflow: hidden;
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__question {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease;
+    overflow: hidden;
+
+    p {
+      overflow: hidden;
+      line-height: var(--line-height-tight);
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --card-about-padding: #{vw(40)} #{vw(16)} #{vw(6)};
+    --card-about-min-height: #{vw(142)};
+    --card-about-gap: #{vw(20)};
+  }
+}

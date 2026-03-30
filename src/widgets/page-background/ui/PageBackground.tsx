@@ -1,6 +1,6 @@
 "use client";
 
-import LiquidEther from "@/shared/ui/animations/LiquidEther";
+import LiquidEther from "@/shared/ui/animations/LiquidEther/LiquidEther";
 import {
   LiquidEtherConfig,
   ImgBgConfig,
@@ -24,11 +24,17 @@ export const PageBackground = ({
   return (
     <div className={scss["page-background"]}>
       <div className={scss["page-background__box"]}>
-        <LiquidEther {...config} />
+        {/* <LiquidEther {...config} /> */}
       </div>
 
-      <div className={scss["page-background__img"]}>
-        <Image src={imageConfig.src} alt={imageConfig.alt} />
+      <div
+        className={`${scss["page-background__img"]}`}
+        key={imageConfig.src.src}
+      >
+        <Image
+          src={imageConfig.src}
+          alt={imageConfig.alt}
+        />
       </div>
 
       <div className={scss["page-background__inner"]}>{children}</div>

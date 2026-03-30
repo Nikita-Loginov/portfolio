@@ -1,0 +1,166 @@
+.card-border {
+  --card-border-width-decor: 18px;
+  --card-border-width-span: 14px;
+  --card-border-height-span: 2px;
+
+  height: 100%;
+  position: relative;
+
+  @mixin decor($w, $h, $x, $y) {
+    width: $w;
+    height: $h;
+    position: absolute;
+    background-color: var(--gray-color-100);
+
+    @if $x == left {
+      left: 0;
+    } @else if $x == right {
+      right: 0;
+    }
+
+    @if $y == top {
+      top: 0;
+    } @else if $y == bottom {
+      bottom: 0;
+    }
+  }
+
+  &__decors {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    span {
+      display: flex;
+      width: var(--card-border-width-decor);
+      aspect-ratio: 1 / 1;
+      //   background-color: red;
+      position: relative;
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        margin-top: auto;
+      }
+
+      display: flex;
+      width: var(--card-border-width-decor);
+      aspect-ratio: 1 / 1;
+      position: relative;
+
+      &:nth-child(even) {
+        margin-left: auto;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &:nth-child(1) {
+        &::after {
+          @include decor(
+            var(--card-border-width-span),
+            var(--card-border-height-span),
+            right,
+            top
+          );
+        }
+
+        &::before {
+          @include decor(
+            var(--card-border-height-span),
+            var(--card-border-width-span),
+            left,
+            bottom
+          );
+        }
+      }
+
+      &:nth-child(2) {
+        &::after {
+          @include decor(
+            var(--card-border-width-span),
+            var(--card-border-height-span),
+            left,
+            top
+          );
+        }
+
+        &::before {
+          @include decor(
+            var(--card-border-height-span),
+            var(--card-border-width-span),
+            right,
+            bottom
+          );
+        }
+      }
+
+      &:nth-child(3) {
+        &::after {
+          @include decor(
+            var(--card-border-height-span),
+            var(--card-border-width-span),
+            left,
+            top
+          );
+        }
+
+        &::before {
+          @include decor(
+            var(--card-border-width-span),
+            var(--card-border-height-span),
+            right,
+            bottom
+          );
+        }
+      }
+
+      &:nth-child(4) {
+        &::after {
+          @include decor(
+            var(--card-border-height-span),
+            var(--card-border-width-span),
+            right,
+            top
+          );
+        }
+
+        &::before {
+          @include decor(
+            var(--card-border-width-span),
+            var(--card-border-height-span),
+            left,
+            bottom
+          );
+        }
+      }
+
+      &:after,
+      &:before {
+        content: "";
+        background-color: var(--gray-color-100);
+        position: absolute;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    min-height: 100%;
+    display: flex;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --card-border-width-decor: #{vw(18)};
+    --card-border-width-span: #{vw(14)};
+    --card-border-height-span: #{vw(2)};
+  }
+}

@@ -1,5 +1,5 @@
 .footer {
-  --footer-padding-bottom: 40px;
+  --footer-padding-bottom: 75px;
   --footer-inner-gap: 20px;
   --footer-block-gap: 12px;
   --footer-padding-bottom-single: 75px;
@@ -38,7 +38,7 @@
   }
 
   @media (min-width: $desktop-breakpoint) {
-    --footer-padding-bottom: #{vw(40)};
+    --footer-padding-bottom: #{vw(75)};
     --footer-inner-gap: #{vw(20)};
     --footer-block-gap: #{vw(12)};
     --footer-padding-bottom-single: #{vw(75)};

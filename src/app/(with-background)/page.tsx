@@ -1,5 +1,5 @@
 import { createPageMetadata } from "@/shared";
-import { HomePage } from "@/pages/home";
+import { HomePage } from "@/widgets/home";
 
 export const metadata = createPageMetadata("Главная");
 

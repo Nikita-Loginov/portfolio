@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
+import Link from "next/link";
 
 import { Container } from "../container/Container";
 import { Button } from "../buttons/Button/Button";
@@ -27,10 +28,12 @@ export const Header = () => {
       <Container>
         <div className={scss["header__inner"]}>
           <div className={scss["header__logo"]}>
-            <h1 className={classNames(isHome ? "h1" : "p1")}>
-              nIKITA {isHome && <br />}
-              LOGINOv
-            </h1>
+            <Link href={'/'}>
+              <h1 className={classNames(isHome ? "h1" : "p1")}>
+                nIKITA {isHome && <br />}
+                LOGINOv
+              </h1>
+            </Link>
           </div>
 
           <div className={scss["header__content"]}>

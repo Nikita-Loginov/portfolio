@@ -11,12 +11,16 @@ export default function WithBackgroundLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const liquidConfig = LiquidConfigs.find((liquidConfig) => liquidConfig.path === pathname) || LiquidConfigs[0];
+  const liquidConfig =
+    LiquidConfigs.find((liquidConfig) => liquidConfig.path === pathname) ||
+    LiquidConfigs[0];
   const imageConfig =
     ImgsBg.find((imgBgConfig) => imgBgConfig.path === pathname) || ImgsBg[0];
 
+  const pageName = pathname === "/" ? "home" : pathname?.replace("/", "");
+
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${pageName ? `wrapper--${pageName}` : ""}`}>
       <Header />
 
       <PageBackground config={liquidConfig} imageConfig={imageConfig} />

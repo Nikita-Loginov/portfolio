@@ -1,0 +1,19 @@
+export const CursorArrowFilledIcon = ({
+  ...props
+}: React.SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M12 24H16V20H14V18H12V16H18V14H16V12H14V10H12V8H10V6H8V4H6V2H4V22H6V20H8V18H10V20H12V24Z"
+        fill="white"
+      />
+    </svg>
+  );
+};

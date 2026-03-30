@@ -11,6 +11,8 @@
   --dark-color-0: #0a0311;
   --dark-color-1: #0a031103;
 
+  --darkviolet-0: #0cc288;
+
   --font-family-main: "PT Sans", sans-serif;
   --font-family-second: "Digital dream Skew Narrow", sans-serif;
 
@@ -40,6 +42,8 @@
   --radius-3xl: 24px;
   --radius-4xl: 28px;
   --radius-5xl: 32px;
+  --radius-6xl: 36px;
+  --radius-7xl: 40px;
 
   --icon-sm: 16px;
   --icon-base: 20px;
@@ -53,7 +57,7 @@
     1840px + (calc(var(--container-inline-padding) * 2))
   );
 
-  --calback-header-height: 116px;
+  --calback-header-height: 184px;
 
   --gap-blocks: 40px;
 }
@@ -71,7 +75,7 @@
     --container-max-width: calc(
       #{vw(1840)} + (var(--container-inline-padding) * 2)
     );
-    --calback-header-height: #{vw(116)};
+    --calback-header-height: #{vw(184)};
     --gap-blocks: #{vw(40)};
     --radius-sm: #{vw(4)};
     --radius-base: #{vw(8)};
@@ -82,6 +86,8 @@
     --radius-3xl: #{vw(24)};
     --radius-4xl: #{vw(28)};
     --radius-5xl: #{vw(32)};
+    --radius-6xl: #{vw(36)};
+    --radius-7xl: #{vw(40)};
     --icon-sm: #{vw(16)};
     --icon-base: #{vw(20)};
     --icon-md: #{vw(24)};

@@ -11,21 +11,21 @@ export const useElementSize = ({ ref, varName }: UseElementSizeProps) => {
   useEffect(() => {
     if (!ref.current) return;
 
-    const updateSize = () => {
-      const { offsetHeight } = ref.current!;
+    const element = ref.current;
+
+    const observer = new ResizeObserver(() => {
+      const { offsetHeight } = element;
 
       document.documentElement.style.setProperty(
         `--${varName}`,
         `${offsetHeight}px`
       );
-    };
+    });
 
-    updateSize();
-
-    window.addEventListener("resize", updateSize);
+    observer.observe(element);
 
     return () => {
-      window.removeEventListener("resize", updateSize);
+      observer.disconnect();
     };
   }, [ref, varName]);
 

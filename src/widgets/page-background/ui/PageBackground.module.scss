@@ -1,11 +1,15 @@
 .page-background {
   width: 100%;
   height: 100%;
+  position: fixed;
+  z-index: 1;
+  inset: 0;
 
   &__box {
-    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: relative;
     z-index: 1;
-    inset: 0;
   }
 
   &__img {
@@ -13,7 +17,9 @@
     height: 100%;
     position: fixed;
     z-index: 0;
-    inset:0;
+    inset: 0;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
 
     img {
       width: 100%;
@@ -25,5 +31,11 @@
   &__inner {
     position: relative;
     z-index: 2;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 }

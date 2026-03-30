@@ -9,11 +9,16 @@
     background-color: var(--dark-color-0);
     padding: var(--tooltip-padding);
     font-family: var(--font-family-main);
+    border-radius: var(--radius-xl);
   }
 
   @media (min-width: $desktop-breakpoint) {
     --tooltip-max-width: #{vw(300)};
     --tooltip-padding: #{vw(8)} #{vw(8)};
+  }
+
+  :where(.css-dev-only-do-not-override-151uw82).ant-tooltip-hidden {
+    display: flex;
   }
 }
 
