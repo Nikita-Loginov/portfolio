@@ -25,6 +25,6 @@ export const MENU_ITEMS = [
   },
   {
     title: "Контакты",
-    to: "/contact",
+    to: "/contacts",
   },
 ];

@@ -58,7 +58,7 @@ body {
   flex-direction: column;
 
   &:not(.wrapper--home) {
-    --main-padding-top-no-home: 60px;
+    --main-padding-top-no-home: 40px;
 
     .main {
       padding-top: calc(

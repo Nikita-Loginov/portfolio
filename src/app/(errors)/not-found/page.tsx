@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { NotFound as  NotFoundComp} from "@/shared";
 
 export const metadata: Metadata = {
   title: "Страница не найдена",
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
 };
 
 export default function NotFound() {
-  return <p>404</p>;
+  return <NotFoundComp />;
 }

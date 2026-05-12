@@ -3,6 +3,7 @@ export * from "./config/animations";
 
 export * from "./ui/animations/LiquidEther/LiquidEther";
 export * from "./ui/animations/FallingText/FallingText";
+export * from "./ui/animations/SplashCursor/SplashCursor";
 export * from "./ui/container/Container";
 export * from "./ui/header/Header";
 export * from "./ui/buttons/Button/Button";
@@ -12,6 +13,8 @@ export * from "./ui/menu/Menu";
 export * from "./ui/hint/Hint";
 export * from "./ui/cards/CardBorder/CardBorder";
 export * from "./ui/preloader/Preloader";
-export * from './ui/progress/Progress'
+export * from "./ui/progress/Progress";
+export * from "./ui/errors/not-found/NotFound";
+export * from './ui/lists/ListSimple/ListSimple'
 
 export * from "./providers/PreloaderProvider/PreloaderProvider";

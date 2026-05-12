@@ -1,0 +1,93 @@
+.not-found {
+  --not-found-inner-max-width: 818px;
+  --not-found-inner-gap: 40px;
+  --not-found-content-gap: 25px;
+  --not-found-textbox-gap: 25px;
+  --not-found-top-gap: 20px;
+  --not-found-title-fz: 200px;
+
+  //   padding-bottom: calc(var(--header-height, var(--calback-header-height)) + var(--main-padding-top-no-home));;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: var(--not-found-inner-max-width);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--not-found-inner-gap);
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 70%;
+      aspect-ratio: 1 / 1;
+      background-color: rgba(56, 36, 153, .4);
+      z-index: 1;
+      border-radius: 50%;
+      filter: blur(54px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--not-found-content-gap);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__textbox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--not-found-textbox-gap);
+    text-align: center;
+
+    p {
+      line-height: var(--line-height-tight);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--not-found-top-gap);
+    font-family: var(--font-family-second);
+    font-weight: var(--weight-font-md);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      font-size: var(--not-found-title-fz);
+      // filter: blur(1px)
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --not-found-inner-max-width: #{vw(818)};
+    --not-found-inner-gap: #{vw(40)};
+    --not-found-content-gap: #{vw(25)};
+    --not-found-textbox-gap: #{vw(25)};
+    --not-found-top-gap: #{vw(20)};
+    --not-found-title-fz: #{vw(200)};
+  }
+}

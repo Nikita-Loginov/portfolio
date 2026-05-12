@@ -1,0 +1,18 @@
+.contacts {
+  width: 100%;
+  
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    // background-color: #fff;
+  }
+}

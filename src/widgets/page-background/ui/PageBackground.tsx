@@ -1,6 +1,7 @@
 "use client";
 
 import LiquidEther from "@/shared/ui/animations/LiquidEther/LiquidEther";
+import SplashCursor from "@/shared/ui/animations/SplashCursor/SplashCursor";
 import {
   LiquidEtherConfig,
   ImgBgConfig,
@@ -24,6 +25,7 @@ export const PageBackground = ({
   return (
     <div className={scss["page-background"]}>
       <div className={scss["page-background__box"]}>
+        <SplashCursor />
         {/* <LiquidEther {...config} /> */}
       </div>
 

@@ -1,0 +1,45 @@
+.list-simple {
+  --list-simple-gap: 4px;
+  --list-simple-link-gap: 8px;
+  --list-simple-link-mh: 38px;
+  --list-simple-link-padding-inline-hover: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-simple-gap);
+  align-items: flex-start;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: var(--list-simple-link-gap);
+    border: 1px solid transparent;
+    border-radius: var(--radius-7xl);
+    transition: border-color var(--transition-base),
+      padding-inline var(--transition-base);
+    min-height: var(--list-simple-link-mh);
+
+    &:hover {
+      border-color: var(--gray-color-0);
+      padding-inline: var(--list-simple-link-padding-inline-hover);
+    }
+
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg path {
+      fill: var(--gray-color-0);
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --list-simple-gap: #{vw(4)};
+    --list-simple-link-gap: #{vw(8)};
+    --list-simple-link-mh: #{vw(38)};
+    --list-simple-link-padding-inline-hover: #{vw(12)};
+  }
+}
