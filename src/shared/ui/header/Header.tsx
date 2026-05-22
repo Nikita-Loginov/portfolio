@@ -4,6 +4,9 @@ import { useRef } from "react";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+import { headerVariants } from "@/shared/config/motion/variants";
 
 import { Container } from "../container/Container";
 import { Button } from "../buttons/Button/Button";
@@ -16,6 +19,7 @@ import { useElementSize } from "@/shared/hooks";
 
 import scss from "./Header.module.scss";
 
+
 export const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -24,11 +28,17 @@ export const Header = () => {
   useElementSize({ ref: headerRef, varName: "header-height" });
 
   return (
-    <header className={scss.header} ref={headerRef}>
+    <motion.header
+      className={scss.header}
+      ref={headerRef}
+      variants={headerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <Container>
         <div className={scss["header__inner"]}>
           <div className={scss["header__logo"]}>
-            <Link href={'/'}>
+            <Link href={"/"}>
               <h1 className={classNames(isHome ? "h1" : "p1")}>
                 nIKITA {isHome && <br />}
                 LOGINOv
@@ -52,7 +62,7 @@ export const Header = () => {
                 as="link"
                 to={SOCIALS_CONFIG.resume}
                 variant="text"
-                target="_parent"
+                target="_blank"
                 theme="secondary"
                 iconLeft={<Icons.DocumentCodeIcon />}
                 tooltip="Открыть резюме (PDF)"
@@ -63,6 +73,6 @@ export const Header = () => {
           </div>
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 };

@@ -1,0 +1,29 @@
+.contact-form {
+  --contact-form-gap: 32px;
+  --contact-form-inputs-gap: 12px;
+  --contact-form-footer-gap: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--contact-form-gap);
+  width: 100%;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--contact-form-inputs-gap);
+  }
+
+  &__footer,
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--contact-form-footer-gap);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --contact-form-gap: #{vw(32)};
+    --contact-form-inputs-gap: #{vw(12)};
+    --contact-form-footer-gap: #{vw(12)};
+  }
+}

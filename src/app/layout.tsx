@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
-import { seoConfig, PreloaderProvider } from "@/shared";
+import {
+  seoConfig,
+  PreloaderProvider,
+  personSchema,
+  websiteSchema,
+} from "@/shared";
+
+import { QueryProvider } from "@/shared/providers/QueryProvider/QueryProvider";
 
 import "./styles/global.scss";
 
 export const metadata: Metadata = seoConfig;
+
+const combinedSchema = [personSchema, websiteSchema];
 
 export default function RootLayout({
   children,
@@ -12,8 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru-RU">
       <head>
+        <meta name="theme-color" content="#28212f" />
         <link
           rel="preload"
           href="/fonts/digital_dreams_kew_narrow.woff2"
@@ -30,7 +42,22 @@ export default function RootLayout({
         />
       </head>
       <body id="body">
-        <PreloaderProvider>{children}</PreloaderProvider>
+        <QueryProvider>
+          <PreloaderProvider>
+            {children}
+
+            <Toaster position="top-right" />
+          </PreloaderProvider>
+        </QueryProvider>
+
+        <Script
+          id="schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(combinedSchema),
+          }}
+        />
       </body>
     </html>
   );

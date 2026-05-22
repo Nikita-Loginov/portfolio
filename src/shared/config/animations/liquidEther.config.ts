@@ -42,5 +42,10 @@ export const ImgsBg: ImgBgConfig[] = [
     path: '/contacts',
     src: Images.BackgroundContacts,
     alt: 'Фотография фона для страницы "Мои контакты"',
+  },
+  {
+    path: '/experience',
+    src: Images.BackgroundExperience,
+    alt: 'Фотография фона для страницы "Мой опыт"',
   }
 ]

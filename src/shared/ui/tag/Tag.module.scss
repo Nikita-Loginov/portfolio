@@ -1,0 +1,35 @@
+.tag {
+  --tag-gap: 4px;
+  --tag-size-small-padding-y: 4px;
+  --tag-size-small-padding-x: 12px;
+  --tag-size-small-min-height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tag-gap);
+  position: relative;
+  border-radius: var(--radius-7xl);
+
+  &--size {
+    &-small {
+      padding: var(--tag-size-small-padding-y) var(--tag-size-small-padding-x);
+      min-height: var(--tag-size-small-min-height);
+    }
+  }
+
+  &--theme {
+    &-flat {
+      color: var(--gray-color-0);
+      background-color: transparent;
+      border: 1px dashed var(--gray-color-0);
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --tag-gap: #{vw(4)};
+    --tag-size-small-padding-y: #{vw(4)};
+    --tag-size-small-padding-x: #{vw(12)};
+    --tag-size-small-min-height: #{vw(28)};
+  }
+}

@@ -16,7 +16,8 @@
   gap: var(--button-gap);
   cursor: pointer;
   border: var(--button-border-width) solid transparent;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition: background-color var(--transition-base),
+    color var(--transition-base), transform var(--transition-base) ease;
 
   &--size {
     &-small {
@@ -107,6 +108,15 @@
         color: var(--gray-color-0);
       }
     }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:active:not(.button--disabled) {
+    transform: scale(0.97);
   }
 
   @media (min-width: $desktop-breakpoint) {

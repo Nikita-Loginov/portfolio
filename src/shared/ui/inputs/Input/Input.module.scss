@@ -1,0 +1,125 @@
+.input-box {
+  --input-content-mh: 40px;
+  --input-content-textarea-mh: 96px;
+  --input-content-padding: 2px 12px;
+  --input-content-textarea-padding: 16px 12px;
+  --input-content-gap: 8px;
+  --input-gap: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-gap);
+  width: 100%;
+
+  &--theme {
+    &-primary {
+      .input-box {
+        &__content {
+          background-color: var(--color-dark-300);
+          color: var(--color-white-0);
+          border-color: var(--color-dark-700);
+        }
+      }
+    }
+  }
+
+  &--error {
+    .input-box {
+      &__content {
+        border-color: var(--red-color-100);
+        color: var(--red-color-100);
+      }
+    }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &--textarea {
+    .input-box {
+      &__content {
+        min-height: var(--input-content-textarea-mh);
+        padding: var(--input-content-textarea-padding);
+
+        textarea {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+    min-height: var(--input-content-mh);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--input-content-gap);
+    width: 100%;
+    padding: var(--input-content-padding);
+    border: 1px dashed var(--gray-color-100);
+    color: var(--gray-color-0);
+    font-size: var(--radius-xl);
+
+    input,
+    textarea {
+      width: 100%;
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      resize: none;
+
+      &::placeholder {
+        font: inherit;
+        color: var(--gray-color-0);
+        // opacity: 0.8;
+      }
+    }
+  }
+
+  &__error {
+    text-align: left;
+    color: var(--red-color-100);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-color-0);
+
+    svg path {
+      fill: var(--gray-color-0);
+    }
+
+    &--small {
+      font-size: var(--icon-sm);
+      width: var(--icon-sm);
+      height: var(--icon-sm);
+    }
+
+    &--medium {
+      font-size: var(--icon-base);
+      width: var(--icon-base);
+      height: var(--icon-base);
+    }
+
+    &--big {
+      font-size: var(--icon-md);
+      width: var(--icon-md);
+      height: var(--icon-md);
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --input-content-mh: #{vw(40)};
+    --input-content-padding: #{vw(2)} #{vw(12)};
+    --input-content-textarea-padding: #{vw(16)} #{vw(12)};
+    --input-content-gap: #{vw(8)};
+    --input-content-textarea-mh: #{vw(96)};
+    --input-gap: #{vw(8)};
+  }
+}

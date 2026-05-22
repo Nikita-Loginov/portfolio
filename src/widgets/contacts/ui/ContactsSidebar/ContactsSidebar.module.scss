@@ -1,0 +1,20 @@
+.contacts-sidebar {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--gray-color-0);
+  color: var(--dark-color-0);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--dark-color-0);
+    color: var(--gray-color-0);
+    padding: 12px;
+    border-radius: var(--radius-md);
+  }
+}

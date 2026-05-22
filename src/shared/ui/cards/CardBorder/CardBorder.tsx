@@ -1,4 +1,10 @@
+import { motion } from 'framer-motion';
+
+import { cardVariants } from "@/shared/config/motion/variants";
+
+
 import scss from "./CardBorder.module.scss";
+
 
 interface CardBorderProps {
   children?: React.ReactNode;
@@ -6,7 +12,7 @@ interface CardBorderProps {
 
 export const CardBorder = ({ children }: CardBorderProps) => {
   return (
-    <div className={scss["card-border"]}>
+    <motion.div variants={cardVariants} className={scss["card-border"]}>
       <div className={scss["card-border__decors"]}>
         <span></span>
 
@@ -18,6 +24,6 @@ export const CardBorder = ({ children }: CardBorderProps) => {
       </div>
 
       <div className={scss["card-border__content"]}>{children}</div>
-    </div>
+    </motion.div>
   );
 };

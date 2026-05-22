@@ -3,10 +3,13 @@
 import Link from "next/link";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
+import { easeOut, motion } from "framer-motion";
 
 import { Tooltip } from "../toltips/Tooltip";
 
 import { MENU_ITEMS } from "./config/menu-items.config";
+
+import { menuVariants } from "@/shared/config/motion/variants";
 
 import scss from "./Menu.module.scss";
 
@@ -18,7 +21,12 @@ export const Menu = ({ className }: MenuProps) => {
   const pathname = usePathname();
 
   return (
-    <div className={classNames(scss.menu, className)}>
+    <motion.div
+      className={classNames(scss.menu, className)}
+      variants={menuVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <nav className={scss["menu__box"]}>
         <ul className={scss["menu__list"]}>
           {MENU_ITEMS.map((item) => {
@@ -44,6 +52,6 @@ export const Menu = ({ className }: MenuProps) => {
           })}
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 };

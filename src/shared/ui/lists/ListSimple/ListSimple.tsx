@@ -28,7 +28,7 @@ export const ListSimple = ({ items }: ListSimpleProps) => {
         );
 
         return (
-          <li className={scss["list-simple__link"]}>
+          <li className={scss["list-simple__link"]} key={link.label}>
             {link.to ? (
               <Link href={link.to} aria-label={link.ariaLabel} target="_blank">
                 {content}

@@ -1,11 +1,17 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 
 import FallingText from "@/shared/ui/animations/FallingText/FallingText";
 
-import { Container } from "@/shared";
+import { Container, TopText } from "@/shared";
 
 import { SKILLS_INFO } from "@/shared/config/about";
+
+import {
+  textBlockVariants,
+  pageVariants,
+} from "@/shared/config/motion/variants";
 
 import scss from "./SkillsPage.module.scss";
 
@@ -28,19 +34,15 @@ export const SkillsPage = () => {
     };
   }, []);
   return (
-    <section className={scss["skills"]}>
+    <motion.section
+      className={scss["skills"]}
+      variants={pageVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <Container className={scss["skills__container"]}>
         <div className={scss["skills__inner"]}>
-          <div className={scss["skills__top"]}>
-            <p className="p2">
-              {SKILLS_INFO.desc.map((line, index) => (
-                <span key={index}>
-                  {line}
-                  {index !== SKILLS_INFO.desc.length - 1 && <br />}
-                </span>
-              ))}
-            </p>
-          </div>
+          <TopText text={SKILLS_INFO.desc}/>
 
           <div className={scss["skills__content"]} ref={contentRef}>
             <FallingText
@@ -67,6 +69,6 @@ export const SkillsPage = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };

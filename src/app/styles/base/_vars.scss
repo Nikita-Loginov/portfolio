@@ -13,6 +13,8 @@
 
   --darkviolet-0: #0cc288;
 
+  --red-color-100: #ca0201;
+
   --font-family-main: "PT Sans", sans-serif;
   --font-family-second: "Digital dream Skew Narrow", sans-serif;
 
@@ -60,6 +62,9 @@
   --calback-header-height: 184px;
 
   --gap-blocks: 40px;
+
+  --footer-padding-bottom: 75px;
+  --footer-padding-bottom-single: 75px;
 }
 
 @media (min-width: $desktop-breakpoint) {
@@ -91,5 +96,8 @@
     --icon-sm: #{vw(16)};
     --icon-base: #{vw(20)};
     --icon-md: #{vw(24)};
+
+    --footer-padding-bottom: #{vw(75)};
+    --footer-padding-bottom-single: #{vw(75)};
   }
 }
