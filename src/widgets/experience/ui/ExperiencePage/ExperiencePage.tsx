@@ -23,7 +23,7 @@ import scss from "./ExperiencePage.module.scss";
 
 export const ExperiencePage = () => {
   return (
-    <div className={scss["experience"]}>
+    <section className={scss["experience"]}>
       <Container>
         <div className={scss["experience__inner"]}>
           <div className={scss["experience__content"]}>
@@ -44,16 +44,6 @@ export const ExperiencePage = () => {
                   variants={cardVariants}
                 >
                   <div className={scss["experience__item-top"]}>
-                    <div className={scss["experience__item-date"]}>
-                      <p className="p2">
-                        <span className={scss["experience__item-date-period"]}>
-                          {formatPeriod(item.period.start, item.period.end)}
-                        </span>{" "}
-                        ({getPeriodDuration(item.period.start, item.period.end)}
-                        )
-                      </p>
-                    </div>
-
                     <div className={scss["experience__item-btns"]}>
                       {item.links?.resume && (
                         <Button
@@ -83,6 +73,16 @@ export const ExperiencePage = () => {
                         </Button>
                       )}
                     </div>
+
+                    <div className={scss["experience__item-date"]}>
+                      <p className="p2">
+                        <span className={scss["experience__item-date-period"]}>
+                          {formatPeriod(item.period.start, item.period.end)}
+                        </span>{" "}
+                        ({getPeriodDuration(item.period.start, item.period.end)}
+                        )
+                      </p>
+                    </div>
                   </div>
 
                   <div className={scss["experience__item-info"]}>
@@ -103,7 +103,7 @@ export const ExperiencePage = () => {
                       <div className={scss["experience__item-tags"]}>
                         {item.tags.map((tag) => (
                           <Tag theme="flat">
-                            <p className="p2">{tag.label}</p>
+                            <p className="p3">{tag.label}</p>
                           </Tag>
                         ))}
                       </div>
@@ -117,6 +117,6 @@ export const ExperiencePage = () => {
           </motion.div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };

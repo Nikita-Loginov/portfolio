@@ -1,0 +1,38 @@
+.projects {
+  --projects-inner-gap: 40px;
+  --projects-btns-gap: 12px;
+  --projects-items-gap: 12px;
+
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--projects-inner-gap);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: var(--projects-btns-gap);
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    &.active {
+      border-bottom-color: var(--blue-color-100);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--projects-items-gap);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --projects-inner-gap: #{vw(40)};
+    --projects-btns-gap: #{vw(12)};
+    --projects-items-gap: #{vw(12)};
+  }
+}

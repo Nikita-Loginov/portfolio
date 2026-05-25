@@ -4,7 +4,7 @@ export * from "./config/animations";
 export * from "./ui/animations/LiquidEther/LiquidEther";
 export * from "./ui/animations/FallingText/FallingText";
 export * from "./ui/animations/SplashCursor/SplashCursor";
-export * from './ui/animations/MetallicPaint/MetallicPaint'
+export * from "./ui/animations/MetallicPaint/MetallicPaint";
 export * from "./ui/container/Container";
 export * from "./ui/header/Header";
 export * from "./ui/buttons/Button/Button";
@@ -18,7 +18,9 @@ export * from "./ui/progress/Progress";
 export * from "./ui/errors/not-found/NotFound";
 export * from "./ui/lists/ListSimple/ListSimple";
 export * from "./ui/inputs/Input/Input";
-export * from './ui/top/TopText/TopText'
-export * from './ui/tag/Tag'
+export * from "./ui/top/TopText/TopText";
+export * from "./ui/tag/Tag";
+export * from "./ui/cards/CardProject/CardProject";
+export * from './ui/cards/CardTilted/CardTilted'
 
 export * from "./providers/PreloaderProvider/PreloaderProvider";

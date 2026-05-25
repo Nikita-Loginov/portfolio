@@ -1,0 +1,26 @@
+.tabs {
+  --tabs-gap: 40px;
+  --tabs-btns-gap: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--tabs-gap);
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--tabs-btns-gap);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --tabs-gap: #{vw(40)};
+    --tabs-btns-gap: #{vw(12)};
+  }
+}

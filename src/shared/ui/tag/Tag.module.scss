@@ -1,15 +1,15 @@
 .tag {
   --tag-gap: 4px;
   --tag-size-small-padding-y: 4px;
-  --tag-size-small-padding-x: 12px;
-  --tag-size-small-min-height: 28px;
+  --tag-size-small-padding-x: 8px;
+  --tag-size-small-min-height: 25px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--tag-gap);
   position: relative;
-  border-radius: var(--radius-7xl);
+  border-radius: var(--radius-lg);
 
   &--size {
     &-small {
@@ -19,6 +19,12 @@
   }
 
   &--theme {
+    &-primary {
+      border: 1px solid var(--gray-color-200);
+      background-color: transparent;
+      color: var(--gray-color-0);
+    }
+    
     &-flat {
       color: var(--gray-color-0);
       background-color: transparent;
@@ -29,7 +35,7 @@
   @media (min-width: $desktop-breakpoint) {
     --tag-gap: #{vw(4)};
     --tag-size-small-padding-y: #{vw(4)};
-    --tag-size-small-padding-x: #{vw(12)};
-    --tag-size-small-min-height: #{vw(28)};
+    --tag-size-small-padding-x: #{vw(8)};
+    --tag-size-small-min-height: #{vw(25)};
   }
 }

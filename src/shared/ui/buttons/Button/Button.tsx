@@ -14,7 +14,7 @@ interface ButtonProps {
   variant?: "text" | "icon";
   as?: "button" | "link";
   size?: "small" | "medium";
-  theme?: "primary" | "secondary" | "flat";
+  theme?: "primary" | "secondary" | "flat" | 'tab';
   to?: string;
   iconSize?: "small" | "medium" | "big";
   target?: "_blank" | "_parent";
