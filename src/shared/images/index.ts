@@ -2,10 +2,15 @@ import BackgroundHome from "./backgrounds/background-home.webp";
 import BackgroundHome2x from "./backgrounds/background-home2x.webp";
 import BackgroundAbout from "./backgrounds/background-about.webp";
 import BackgroundSkills from "./backgrounds/background-skills.webp";
-import BackgroundExperience from './backgrounds/background-experience.webp'
-import BackgroundContacts from './backgrounds/background-contacts.png'
+import BackgroundExperience from "./backgrounds/background-experience.webp";
+import BackgroundContacts from "./backgrounds/background-contacts.png";
 
 import KarmansImg from "./projects/karmans.webp";
+
+import Computer from "./decors/computer.webp";
+import Lightning from "./decors/lightning.webp";
+import Geo from "./decors/geo.webp";
+import Developer from "./decors/developer.webp";
 
 export const Images = {
   BackgroundHome,
@@ -16,4 +21,9 @@ export const Images = {
   BackgroundExperience,
 
   KarmansImg,
+
+  Computer,
+  Lightning,
+  Geo,
+  Developer
 };

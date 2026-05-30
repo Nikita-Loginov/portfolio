@@ -15,6 +15,7 @@ export const CardProject = ({ item: { name } }: CardProjectProps) => {
     <CardTilted rotateAmplitude={8} scaleOnHover={1.03}>
       <div className={scss["card-project"]}>
         <div className={scss["card-project__img"]}></div>
+        
         <div className={scss["card-project__content"]}>
           <p className="p2">{name}</p>
         </div>

@@ -1,9 +1,9 @@
-// import { MainSectionHome } from "./main-section-home/MainSectionHome";
+import { MainSectionHome } from "./main-section-home/MainSectionHome";
 
 export const HomePage = () => {
   return (
     <>
-      {/* <MainSectionHome /> */}
+      <MainSectionHome />
     </>
   );
 };

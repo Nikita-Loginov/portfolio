@@ -19,7 +19,6 @@ import { useElementSize } from "@/shared/hooks";
 
 import scss from "./Header.module.scss";
 
-
 export const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -39,10 +38,10 @@ export const Header = () => {
         <div className={scss["header__inner"]}>
           <div className={scss["header__logo"]}>
             <Link href={"/"}>
-              <h1 className={classNames(isHome ? "h1" : "p1")}>
+              <p className={classNames(isHome ? "h1" : "p1")}>
                 nIKITA {isHome && <br />}
                 LOGINOv
-              </h1>
+              </p>
             </Link>
           </div>
 

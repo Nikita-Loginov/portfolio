@@ -33,3 +33,14 @@ h4,
 .p3 {
   font-size: var(--font-size-xs);
 }
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--blue-color-200) 0%,
+    var(--violet-color-100) 41.58%,
+    var(--violet-color-200) 98.81%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

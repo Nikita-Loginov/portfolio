@@ -18,12 +18,12 @@ export const Footer = () => {
     <footer
       className={classNames(
         scss.footer,
-        pathname === "/" ? scss["footer--single"] : null
+        // pathname === "/" ? scss["footer--single"] : null
       )}
     >
       <Container>
         <div className={scss["footer__inner"]}>
-          {pathname === "/" && (
+          {/* {pathname === "/" && (
             <motion.div
               className={scss["footer__block"]}
               variants={footerBlockVariants}
@@ -34,7 +34,7 @@ export const Footer = () => {
 
               <p className="p2">3+ лет опыта</p>
             </motion.div>
-          )}
+          )} */}
 
           <Menu className={scss["footer__menu"]} />
         </div>

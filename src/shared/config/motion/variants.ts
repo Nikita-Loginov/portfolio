@@ -84,3 +84,68 @@ export const textItem = {
     },
   },
 };
+
+export const heroContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+export const heroTitleVariants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 0.98,
+    filter: "blur(8px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.9,
+      ease: easeOut,
+    },
+  },
+};
+
+export const heroTextVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+    filter: "blur(4px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.7,
+      ease: easeOut,
+      delay: 0.15,
+    },
+  },
+};
+
+export const heroGradientVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: easeOut,
+      delay: 0.35,
+    },
+  },
+};

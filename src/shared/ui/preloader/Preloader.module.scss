@@ -1,6 +1,7 @@
 .preloader {
   --preloader-inner-gap: 60px;
   --preloader-content-gap: 10px;
+  --preloader-inner-mw: 604px;
 
   width: 100%;
   min-height: 100%;
@@ -13,7 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--preloader-inner-gap);
-    max-width: 604px;
+    max-width: var(--preloader-inner-mw);
     width: 100%;
     position: relative;
     z-index: 2;
@@ -44,5 +45,6 @@
   @media (min-width: $desktop-breakpoint) {
     --preloader-inner-gap: #{vw(60)};
     --preloader-content-gap: #{vw(10)};
+    --preloader-inner-mw: #{vw(604)};
   }
 }

@@ -11,6 +11,7 @@ import {
 import { Container, ListSimple } from "@/shared";
 
 import { ContactForm } from "@/features/contact-message/ui";
+import { ContactInfo } from "../ContactInfo/ContactInfo";
 
 import { SOCIALS_CONFIG } from "@/shared/config/socials";
 
@@ -58,6 +59,8 @@ export const ContactsPage = () => {
               <ContactForm />
             </div>
           </motion.div>
+
+          <ContactInfo />
         </motion.div>
       </Container>
     </section>
