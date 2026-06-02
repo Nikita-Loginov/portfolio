@@ -1,3 +1,5 @@
+import { ProjectItem } from "@/shared/types/project/project.types";
+
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -49,3 +51,31 @@ export const websiteSchema = {
     },
   ],
 };
+
+export const createProjectSchema = (project: ProjectItem) => ({
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+
+  name: project.nameFull,
+
+  headline: project.seo.title,
+
+  description: project.seo.description,
+
+  image: `${process.env.NEXT_PUBLIC_SITE_URL}/${project.seo.image}`,
+
+  author: {
+    "@type": "Person",
+    name: "Никита Логинов",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+  },
+
+  creator: {
+    "@type": "Person",
+    name: "Никита Логинов",
+  },
+
+  url: `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${project.slug}`,
+
+  // dateModified: project.updatedAt,
+});

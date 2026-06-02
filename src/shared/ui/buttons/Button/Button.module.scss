@@ -15,6 +15,7 @@
   justify-content: center;
   gap: var(--button-gap);
   cursor: pointer;
+  // width: 100%;
   border: var(--button-border-width) solid transparent;
   transition: background-color var(--transition-base),
     color var(--transition-base), transform var(--transition-base) ease, border var(--transition-base);
@@ -107,6 +108,10 @@
         border-color: var(--gray-color-0);
         color: var(--gray-color-0);
       }
+
+      svg path {
+        fill: var(--gray-color-0);
+      }
     }
 
     &-tab {
@@ -124,6 +129,11 @@
   &--disabled {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+
+  &__wrapper {
+    // width: 100%;
+    // white-space: nowrap;
   }
 
   &:active:not(.button--disabled) {

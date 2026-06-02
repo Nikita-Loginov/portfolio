@@ -66,7 +66,7 @@ export const ExperiencePage = () => {
                           variant="text"
                           target="_blank"
                           theme="secondary"
-                          iconRight={<Icons.ContactIcon />}
+                          iconRight={<Icons.WebsiteIcon />}
                           tooltip="Сайт компании"
                         >
                           <p className="p2">Сайт компании</p>

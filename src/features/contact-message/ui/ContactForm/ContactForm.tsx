@@ -70,7 +70,11 @@ export const ContactForm = () => {
 
       <div className={scss["contact-form__footer"]}>
         <div className={scss["contact-form__btns"]}>
-          <Button typeBtn="submit" disabled={isPending}>
+          <Button
+            typeBtn="submit"
+            disabled={isPending}
+            tooltip={isPending ? "Отпрляем заявку..." : " Отправить заявку"}
+          >
             <p className="p2">{isPending ? "Отправляем..." : "Отправить"}</p>
           </Button>
         </div>

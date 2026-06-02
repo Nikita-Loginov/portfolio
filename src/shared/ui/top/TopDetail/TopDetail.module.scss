@@ -1,0 +1,12 @@
+.top-detail {
+  --top-detail-gap: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--top-detail-gap);
+
+  @media (min-width: $desktop-breakpoint) {
+    --top-detail-gap: #{vw(16)};
+  }
+}

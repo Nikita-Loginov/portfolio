@@ -1,0 +1,104 @@
+.project {
+  --project-grid: auto 52%;
+  --project-inner-gap: 40px;
+  --project-top-gap: 20px;
+  --project-items-box-gap: 55px;
+  --project-items-gap: 24px;
+  --project-item-gap: 12px;
+  --project-advantages-gap-row: 25px;
+  --project-advantages-gap-col: 35px;
+  --project-img-top: calc(
+    var(--header-height, var(--calback-header-height)) +
+      var(--main-padding-top-no-home)
+  );
+  --project-img-height: calc(
+    100dvh - var(--header-height, var(--calback-header-height)) -
+      var(--main-padding-top-no-home) - var(--footer-padding-bottom-single) -
+      var(--project-inner-gap)
+  );
+
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--project-inner-gap);
+  }
+
+  &__content,
+  &__top {
+    display: grid;
+    grid-template-columns: var(--project-grid);
+    gap: var(--project-top-gap);
+  }
+
+  &__top {
+    align-items: center;
+  }
+
+  &__top-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--project-top-gap);
+    width: 100%;
+  }
+
+  &__items-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--project-items-box-gap);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--project-items-gap);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--project-item-gap);
+
+    p {
+      line-height: var(--line-height-tight);
+    }
+  }
+
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--project-advantages-gap-row) var(--project-advantages-gap-col);
+
+    svg path {
+      fill: var(--gray-color-0);
+    }
+  }
+
+  &__img-box {
+    width: 100%;
+    // height: fit-content;
+    // position: sticky;
+    top: var(--project-img-top);
+  }
+
+  &__img-block {
+    width: 100%;
+    // height: var(--project-img-height);
+    height: min(100%, var(--project-img-height));
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--gray-color-4);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --project-inner-gap: #{vw(40)};
+    --project-top-gap: #{vw(20)};
+    --project-items-box-gap: #{vw(55)};
+    --project-items-gap: #{vw(24)};
+    --project-item-gap: #{vw(12)};
+    --project-advantages-gap-row: #{vw(25)};
+    --project-advantages-gap-col: #{vw(35)};
+  }
+}

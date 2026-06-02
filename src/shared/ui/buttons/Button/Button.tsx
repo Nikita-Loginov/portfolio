@@ -90,7 +90,7 @@ export const Button = ({
   if (tooltip) {
     return (
       <Tooltip title={tooltip}>
-        <span className={scss["button-wrapper"]}>{buttonElement}</span>
+        {buttonElement}
       </Tooltip>
     );
   }

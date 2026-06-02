@@ -19,8 +19,9 @@ export * from "./ui/errors/not-found/NotFound";
 export * from "./ui/lists/ListSimple/ListSimple";
 export * from "./ui/inputs/Input/Input";
 export * from "./ui/top/TopText/TopText";
+export * from "./ui/top/TopDetail/TopDetail";
 export * from "./ui/tag/Tag";
 export * from "./ui/cards/CardProject/CardProject";
-export * from './ui/cards/CardTilted/CardTilted'
+export * from "./ui/cards/CardTilted/CardTilted";
 
 export * from "./providers/PreloaderProvider/PreloaderProvider";

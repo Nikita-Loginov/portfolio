@@ -15,10 +15,10 @@ export const MENU_ITEMS = [
     title: "Опыт",
     to: "/experience",
   },
-  {
-    title: "Услуги",
-    to: "/services",
-  },
+  // {
+  //   title: "Услуги",
+  //   to: "/services",
+  // },
   {
     title: "Портфолио",
     to: "/projects",

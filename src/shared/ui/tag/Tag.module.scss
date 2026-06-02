@@ -10,6 +10,7 @@
   gap: var(--tag-gap);
   position: relative;
   border-radius: var(--radius-lg);
+  transition: background-color var(--transition-base), border-color var(--transition-base);
 
   &--size {
     &-small {
