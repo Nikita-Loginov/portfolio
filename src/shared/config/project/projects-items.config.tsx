@@ -59,7 +59,23 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
       ogImage: "/images/projects/karmanns/og.webp",
     },
     category: ["site"],
-    imgs: [Images.KarmansOne],
+    imgs: [
+      Images.KarmansOne,
+      Images.KarmansTwo,
+      Images.KarmansThree,
+      Images.KarmansTenFive,
+      Images.KarmansFour,
+      Images.KarmansFive,
+      Images.KarmansSix,
+      Images.KarmansSeven,
+      Images.KarmansEight,
+      Images.KarmansNine,
+      Images.KarmansTenOne,
+      Images.KarmansTenTwo,
+      Images.KarmansTenThree,
+      Images.KarmansTenFour,
+      
+    ],
     developerTools: ["React", "Next.js", "TypeScript", "SCSS"]
   },
 ];

@@ -7,15 +7,18 @@
   --project-item-gap: 12px;
   --project-advantages-gap-row: 25px;
   --project-advantages-gap-col: 35px;
-  --project-img-top: calc(
-    var(--header-height, var(--calback-header-height)) +
-      var(--main-padding-top-no-home)
-  );
+  
   --project-img-height: calc(
     100dvh - var(--header-height, var(--calback-header-height)) -
       var(--main-padding-top-no-home) - var(--footer-padding-bottom-single) -
       var(--project-inner-gap)
   );
+  --project-img-height-callback: 800px;
+ 
+  
+  --project-support-gap: 12px;
+  --project-support-padding: 22px 14px;
+  --project-support-btns-gap: 12px;
 
   width: 100%;
 
@@ -76,20 +79,18 @@
     }
   }
 
-  &__img-box {
-    width: 100%;
-    // height: fit-content;
-    // position: sticky;
-    top: var(--project-img-top);
+  &__support {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--project-support-gap);
+    padding: var(--project-support-padding);
   }
 
-  &__img-block {
-    width: 100%;
-    // height: var(--project-img-height);
-    height: min(100%, var(--project-img-height));
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    background-color: var(--gray-color-4);
+  &__support-btns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--project-support-btns-gap);
   }
 
   @media (min-width: $desktop-breakpoint) {
@@ -100,5 +101,10 @@
     --project-item-gap: #{vw(12)};
     --project-advantages-gap-row: #{vw(25)};
     --project-advantages-gap-col: #{vw(35)};
+    --project-img-height-callback: #{vw(800)};
+    --project-img-block-padding: #{vw(16)};
+    --project-support-padding: #{vw(22)} #{vw(14)};
+    --project-support-gap: #{vw(12)};
+    --project-support-btns-gap: #{vw(12)};
   }
 }

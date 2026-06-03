@@ -42,6 +42,7 @@
       &__content {
         min-height: var(--input-content-textarea-mh);
         padding: var(--input-content-textarea-padding);
+        align-items: flex-start;
 
         textarea {
           height: 100%;

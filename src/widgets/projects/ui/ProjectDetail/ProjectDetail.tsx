@@ -1,6 +1,10 @@
+"use client";
+
 import { ProjectItem } from "@/shared/types/project/project.types";
 
-import { Container, TopDetail, Button } from "@/shared";
+import { Container, TopDetail, Button, CardBorder } from "@/shared";
+
+import { ProjectGallery } from "../ProjectGallery/ProjectGallery";
 
 import { Icons } from "@/shared/icons";
 
@@ -23,7 +27,8 @@ const TextBlockProject = (text: string[]) => {
 };
 
 export const ProjectDetail = ({ project }: ProjectDetailProps) => {
-  const { description, tasks, industry, myTasks, advantages } = project;
+  const { description, tasks, industry, myTasks, advantages, imgs, nameFull } =
+    project;
 
   return (
     <section className={scss["project"]}>
@@ -97,13 +102,21 @@ export const ProjectDetail = ({ project }: ProjectDetailProps) => {
                   ))}
                 </div>
               ) : null}
+
+              <CardBorder>
+                <div className={scss["project__support"]}>
+                  <p className="h4">Хотите заказать сайт?</p>
+
+                  <div className={scss["project__support-btns"]}>
+                    <Button theme="secondary">
+                      <p className="p2">Оставить заявку</p>
+                    </Button>
+                  </div>
+                </div>
+              </CardBorder>
             </div>
 
-            <div className={scss["project__img-box"]}>
-              <div className={scss["project__img-block"]}>
-                <p>фотки</p>
-              </div>
-            </div>
+            <ProjectGallery imgs={imgs} nameFull={nameFull} />
           </div>
         </div>
       </Container>

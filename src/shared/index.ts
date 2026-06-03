@@ -23,5 +23,7 @@ export * from "./ui/top/TopDetail/TopDetail";
 export * from "./ui/tag/Tag";
 export * from "./ui/cards/CardProject/CardProject";
 export * from "./ui/cards/CardTilted/CardTilted";
+export * from './ui/swiper/Swiper';
+export * from './ui/computer/Computer'
 
 export * from "./providers/PreloaderProvider/PreloaderProvider";

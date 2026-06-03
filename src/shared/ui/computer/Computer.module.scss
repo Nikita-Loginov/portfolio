@@ -1,0 +1,80 @@
+.computer {
+  --computer-top-padding: 10px 15px;
+  --computer-btns-gap: 3px;
+  --computer-top-gap: 20px;
+  --computer-btns-mh: 16px;
+  --computer-btns-padding: 2px 7px;
+  --computer-btn-size: 5px;
+
+  background-color: var(--gray-color-200);
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  &__top {
+    padding: var(--computer-top-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--computer-top-gap);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: var(--computer-btns-gap);
+    background-color: var(--gray-color-100);
+    width: fit-content;
+    min-height: var(--computer-btns-mh);
+    padding: var(--computer-btns-padding);
+    border-radius: var(--radius-3xl);
+    overflow: hidden;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--computer-btn-size);
+      height: var(--computer-btn-size);
+      flex-shrink: 0;
+      border-radius: 50%;
+
+      &:first-child {
+        background-color: var(--red-color-200);
+      }
+
+      &:nth-child(2) {
+        background-color: var(--yellow-color-100);
+      }
+
+      &:last-child {
+        background-color: var(--darkviolet-100);
+      }
+    }
+  }
+
+  &__content {
+    background-color: var(--gray-color-100);
+    width: 100%;
+    height: 100%;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --computer-top-padding: #{vw(10)} #{vw(15)};
+    --computer-btns-gap: #{vw(3)};
+    --computer-btns-padding: #{vw(2)} #{vw(7)};
+    --computer-btn-size: #{vw(5)};
+    --computer-btns-mh: #{vw(16)};
+    --computer-top-gap: #{vw(20)};
+  }
+}
