@@ -26,7 +26,8 @@
     "sass": "^1.98.0",
     "swiper": "^12.2.0",
     "three": "^0.183.2",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@types/matter-js": "^0.20.2",

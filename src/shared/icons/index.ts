@@ -11,6 +11,7 @@ import { ClockIcon } from "./main/clock";
 import { CodeIcon } from "./main/code";
 import { PaletteIcon } from "./main/palette";
 import { CheckCircleIcon } from "./main/check-circle";
+import { CloseIcon } from "./main/close";
 
 import { LeftArrowIcon } from "./arrows/left-arrow";
 
@@ -28,4 +29,5 @@ export const Icons = {
   CodeIcon,
   PaletteIcon,
   CheckCircleIcon,
+  CloseIcon
 };

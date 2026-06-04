@@ -1,14 +1,14 @@
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
-import { sendTelegramMessage } from "@/server/services/telegram/sendTelegramMessage";
+import { sendTelegramProjectMessage } from "@/server/services/telegram/sendTelegramProjectMessage";
 
-import { contactMessageSchema } from "@/features/contact-message/model/schema";
+import { projectMessageSchema } from "@/features/project-message/model/schema";
 
 export async function POST(req: Request) {
   const body = await req.json();
 
-  const parsed = contactMessageSchema.safeParse(body);
+  const parsed = projectMessageSchema.safeParse(body);
 
   if (!parsed.success) {
     return NextResponse.json({ error: "Invalid data" }, { status: 400 });
@@ -23,9 +23,9 @@ export async function POST(req: Request) {
 
   const page = headersList.get("referer") || "Unknown";
 
-  await sendTelegramMessage(parsed.data, {
+  await sendTelegramProjectMessage(parsed.data, {
     ip,
-    page: page,
+    page
   });
 
   return NextResponse.json({ ok: true });

@@ -1,0 +1,69 @@
+.project-form {
+  --form-gap: 32px;
+  --form-top-gap: 16px;
+  --form-item-gap: 12px;
+  --form-inputs-gap: 12px;
+  --form-checks-gap: 8px;
+  --form-checks-grid-cols: repeat(4, 1fr);
+  --form-btns-gap: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-gap);
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-top-gap);
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-gap);
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-inputs-gap);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-item-gap);
+  }
+
+  &__checks {
+    display: grid;
+    grid-template-columns: var(--form-checks-grid-cols);
+    gap: var(--form-checks-gap);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-item-gap);
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-btns-gap);
+  }
+
+  &__error {
+    color: var(--red-color-100);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    --form-gap: #{vw(32)};
+    --form-top-gap: #{vw(16)};
+    --form-item-gap: #{vw(12)};
+    --form-inputs-gap: #{vw(12)};
+    --form-checks-gap: #{vw(8)};
+    // --form-checks-grid-cols: repeat(4, #{vw(1)});
+    --form-btns-gap: #{vw(12)};
+  }
+}

@@ -10,6 +10,7 @@ import {
 } from "@/shared";
 
 import { QueryProvider } from "@/shared/providers/QueryProvider/QueryProvider";
+import { ModalProvider } from "@/shared/providers/ModalProvider/ModalProvider";
 
 import "./styles/global.scss";
 
@@ -44,9 +45,11 @@ export default function RootLayout({
       <body id="body">
         <QueryProvider>
           <PreloaderProvider>
-            {children}
+            <ModalProvider>{children}</ModalProvider>
 
             <Toaster position="top-right" />
+
+            <div id="modal-root"></div>
           </PreloaderProvider>
         </QueryProvider>
 

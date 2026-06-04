@@ -35,6 +35,27 @@ body {
     overflow-x: hidden;
   }
 
+  &.open-modal {
+    overflow: hidden;
+
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:before {
+    background-color: var(--dark-color-20);
+    backdrop-filter: blur(38px);
+    position: fixed;
+    inset: 0;
+    content: '';
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base);
+  }
+
   // &::-webkit-scrollbar {
   //   width: 8px;
   // }

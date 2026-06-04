@@ -17,3 +17,17 @@
 
   @return $result;
 }
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  pointer-events: none;
+  clippath: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  visibility: hidden;
+  border: 0;
+}
