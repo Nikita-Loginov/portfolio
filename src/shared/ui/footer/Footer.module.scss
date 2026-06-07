@@ -2,11 +2,11 @@
   --footer-inner-gap: 20px;
   --footer-block-gap: 12px;
 
-  --footer-bottom-menu: 32px;
+  --footer-bottom-menu: #{calculate-clamp(15px, 32px, $desktop-breakpoint, $lg-breakpoint)};
 
   position: relative;
   padding-bottom: var(--footer-padding-bottom);
-  z-index: 1;
+  z-index: 99999;
 
   &--single {
     padding-bottom: var(--footer-padding-bottom-single);

@@ -1,7 +1,17 @@
 .main-section {
   --main-section-inner-gap: 10px;
-  --main-section-content-gap: 40px;
-  --main-section-content-offset: 40px;
+  --main-section-content-gap: #{calculate-clamp(
+      20px,
+      40px,
+      $desktop-breakpoint,
+      $lg-breakpoint
+    )};
+  --main-section-content-offset: #{calculate-clamp(
+      20px,
+      40px,
+      $desktop-breakpoint,
+      $lg-breakpoint
+    )};
   --main-section-textbox-max-width: 635px;
 
   width: 100%;

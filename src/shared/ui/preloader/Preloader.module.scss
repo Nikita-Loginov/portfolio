@@ -1,5 +1,10 @@
 .preloader {
-  --preloader-inner-gap: 60px;
+  --preloader-inner-gap: #{calculate-clamp(
+    20px,
+    60px,
+    $desktop-breakpoint,
+    $lg-breakpoint
+  )};
   --preloader-content-gap: 10px;
   --preloader-inner-mw: 604px;
 

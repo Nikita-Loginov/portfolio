@@ -1,13 +1,16 @@
+import classNames from "classnames";
+
 import scss from "./Hint.module.scss";
 
 interface HintProps {
   icon?: React.ReactNode;
   text?: React.ReactNode[];
+  className?: string;
 }
 
-export const Hint = ({ icon, text }: HintProps) => {
+export const Hint = ({ icon, text, className }: HintProps) => {
   return (
-    <div className={scss.hint}>
+    <div className={classNames(scss.hint, className)}>
       {icon && <span className="icon icon--big">{icon}</span>}
 
       <div className={scss["hint__content"]}>

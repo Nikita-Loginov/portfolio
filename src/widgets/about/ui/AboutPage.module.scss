@@ -1,6 +1,6 @@
 .about {
   --about-inner-gap: 20px;
-  --about-content-gap: 64px;
+  --about-content-gap: #{calculate-clamp(40px, 64px, $desktop-breakpoint, $lg-breakpoint)};
 
   width: 100%;
 
@@ -36,5 +36,38 @@
   @media (min-width: $desktop-breakpoint) {
     --about-inner-gap: #{vw(20)};
     --about-content-gap: #{vw(64)};
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    --about-inner-gap: #{calculate-clamp(30px, 40px, $tablet-breakpoint, $mobile-breakpoint)};
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content {
+      position: static;
+      max-width: 70%;
+    }
+
+    &__hint {
+      display: none;
+    }
+
+    &__items-box {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
   }
 }

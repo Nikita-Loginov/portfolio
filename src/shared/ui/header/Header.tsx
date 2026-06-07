@@ -28,7 +28,7 @@ export const Header = () => {
 
   return (
     <motion.header
-      className={scss.header}
+      className={classNames(scss.header, isHome ? scss["header--home"] : "")}
       ref={headerRef}
       variants={headerVariants}
       initial="hidden"
@@ -57,17 +57,31 @@ export const Header = () => {
                 tooltip="GitHub — проекты и код"
               />
 
-              <Button
-                as="link"
-                to={SOCIALS_CONFIG.resume}
-                variant="text"
-                target="_blank"
-                theme="secondary"
-                iconLeft={<Icons.DocumentCodeIcon />}
-                tooltip="Открыть резюме (PDF)"
-              >
-                <p className="p2">Резюме</p>
-              </Button>
+              <div className={scss["header__full"]}>
+                <Button
+                  as="link"
+                  to={SOCIALS_CONFIG.resume}
+                  variant="text"
+                  target="_blank"
+                  theme="secondary"
+                  iconLeft={<Icons.DocumentCodeIcon />}
+                  tooltip="Открыть резюме (PDF)"
+                >
+                  <p className="p2">Резюме</p>
+                </Button>
+              </div>
+
+              <div className={scss["header__media"]}>
+                <Button
+                  as="link"
+                  to={SOCIALS_CONFIG.resume}
+                  variant="icon"
+                  target="_blank"
+                  theme="secondary"
+                  iconLeft={<Icons.DocumentCodeIcon />}
+                  tooltip="Открыть резюме (PDF)"
+                ></Button>
+              </div>
             </div>
           </div>
         </div>

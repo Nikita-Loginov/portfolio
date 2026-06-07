@@ -6,6 +6,8 @@
   --menu-item-min-height: 35px;
   --menu-item-padding: 2px 12px;
   --menu-item-gap: 8px;
+  --menu-info-gap: 8px;
+  --menu-btns-gap: 8px;
 
   display: flex;
   align-items: center;
@@ -22,6 +24,7 @@
     display: flex;
     align-items: center;
     gap: var(--menu-list-gap);
+    flex-wrap: wrap;
   }
 
   &__link {
@@ -29,6 +32,10 @@
     align-items: center;
     justify-content: center;
     gap: var(--menu-link-gap);
+  }
+
+  &__burger {
+    display: none;
   }
 
   &__item {
@@ -56,6 +63,23 @@
     }
   }
 
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: none;
+    flex-direction: column;
+    gap: var(--menu-info-gap);
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--menu-btns-gap);
+  }
+
   @media (min-width: $desktop-breakpoint) {
     --menu-gap: #{vw(20)};
     --menu-box-gap: #{vw(20)};
@@ -64,5 +88,58 @@
     --menu-item-min-height: #{vw(35)};
     --menu-item-padding: #{vw(2)} #{vw(12)};
     --menu-item-gap: #{vw(8)};
+    --menu-info-gap: #{vw(8)};
+    --menu-btns-gap: #{vw(8)};
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --menu-gap: 10px;
+    --menu-box-gap: 10px;
+
+    flex-direction: column;
+    // z-index: -1;
+
+    &__box {
+      padding: 12px;
+      background-color: var(--dark-color-0);
+      border-radius: var(--radius-md);
+      width: 100%;
+      max-height: 70dvh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include scroll-none;
+      display: none;
+      // z-index: -1;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: normal;
+      width: 100%;
+    }
+
+    &__link {
+      align-items: normal;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    &__info {
+      display: flex;
+    }
+
+    &.active {
+      .menu {
+        &__box {
+          display: flex;
+        }
+      }
+    }
   }
 }

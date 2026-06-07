@@ -42,6 +42,7 @@ export const AboutPage = () => {
                   чтобы узнать подробнее
                 </>,
               ]}
+              className={scss['about__hint']}
             />
           </motion.div>
 

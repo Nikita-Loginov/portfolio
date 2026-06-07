@@ -1,5 +1,10 @@
 .header {
-  --header-padding-top: 30px;
+  --header-padding-top: #{calculate-clamp(
+      20px,
+      30px,
+      $desktop-breakpoint,
+      $lg-breakpoint
+    )};
   --header-inner-gap: 20px;
   --header-content-gap: 20px;
   --header-btns-gap: 12px;
@@ -14,6 +19,17 @@
   background-color: var(--dark-color-1);
   backdrop-filter: blur(10px);
   // padding-bottom: 4px;
+
+  &:not(.header--home) {
+    padding-bottom: var(--header-padding-top);
+
+    .header {
+      &__inner {
+        align-items: center;
+        
+      }
+    }
+  }
 
   &__inner {
     display: flex;
@@ -39,10 +55,24 @@
     gap: var(--header-btns-gap);
   }
 
+  &__media {
+    display: none;
+  }
+
   @media (min-width: $desktop-breakpoint) {
     --header-padding-top: #{vw(30)};
     --header-inner-gap: #{vw(20)};
     --header-content-gap: #{vw(20)};
     --header-btns-gap: #{vw(12)};
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__media {
+      display: flex;
+    }
+
+    &__full {
+      display: none;
+    }
   }
 }

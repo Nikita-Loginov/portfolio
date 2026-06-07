@@ -14,6 +14,7 @@ import { CheckCircleIcon } from "./main/check-circle";
 import { CloseIcon } from "./main/close";
 
 import { LeftArrowIcon } from "./arrows/left-arrow";
+import { ChevronDownIcon } from "./arrows/chevron-down";
 
 export const Icons = {
   GuthubIcon,
@@ -29,5 +30,6 @@ export const Icons = {
   CodeIcon,
   PaletteIcon,
   CheckCircleIcon,
-  CloseIcon
+  CloseIcon,
+  ChevronDownIcon
 };

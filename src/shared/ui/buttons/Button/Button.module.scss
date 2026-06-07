@@ -78,6 +78,10 @@
         background-color: var(--gray-color-50);
         border-color: var(--gray-color-0);
       }
+
+      svg path {
+        fill: var(--dark-color-0);
+      }
     }
 
     &-secondary {
@@ -122,6 +126,17 @@
       &:hover {
         border-bottom-color: var(--blue-color-100);
         opacity: 0.6;
+      }
+    }
+
+    &-secondary-two {
+      background-color: var(--gray-color-4);
+      color: var(--gray-color-0);
+      border-color: transparent;
+      backdrop-filter: blur(13px);
+
+      svg path {
+        fill: var(--gray-color-0);
       }
     }
   }
