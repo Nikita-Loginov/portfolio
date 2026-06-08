@@ -24,4 +24,21 @@
   &__content {
     flex: 1;
   }
+
+  @media (max-width: $tablet-breakpoint) or (max-height: 500px) {
+    min-height: 0;
+    
+    &__inner {
+      min-height: auto;
+      margin-top: auto;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__content {
+      // height: 50dvh;
+    }
+  }
 }

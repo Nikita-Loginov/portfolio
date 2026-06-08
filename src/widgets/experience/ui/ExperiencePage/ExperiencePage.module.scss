@@ -111,6 +111,7 @@
     display: flex;
     align-items: center;
     gap: var(--experience-item-btns-gap);
+    flex-wrap: wrap;
   }
 
   &__item-top {
@@ -133,5 +134,35 @@
     --experience-item-tags-gap: #{vw(6)};
     --experience-item-btns-gap: #{vw(6)};
     --experience-item-top-gap: #{vw(16)};
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    --experience-items-gap: 48px;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 70%;
+      position: static;
+      display: none;
+    }
+
+    &__items {
+      max-width: 100%;
+    }
+
+    &__item {
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: $mobile-small-breakpoint) {
+    &__item-btns {
+     
+    }
+
+    
   }
 }

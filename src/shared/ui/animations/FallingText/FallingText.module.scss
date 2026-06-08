@@ -1,6 +1,19 @@
 .falling-text {
-  --falling-text-item-min-height: 60px;
-  --falling-text-item-paddind: 20px 40px;
+  --falling-text-item-min-height: #{calculate-clamp(
+      30px,
+      60px,
+      $desktop-breakpoint,
+      $lg-breakpoint
+    )};
+  --falling-text-item-paddind: #{calculate-clamp(
+      10px,
+      20px,
+      $desktop-breakpoint,
+      $lg-breakpoint
+    )} #{calculate-clamp(20px, 40px, $desktop-breakpoint, $lg-breakpoint)};
+  --falling-text-highlighted-border-width: 2px;
+  --falling-text-highlighted-dash-size: 6px;
+  --falling-text-highlighted-dash-gap: 6px;
 
   position: relative;
   overflow: hidden;
@@ -38,25 +51,28 @@
       background-color: transparent;
       color: var(--gray-color-0);
       border-radius: var(--radius-7xl);
-      border: 2px solid transparent;
-    
+      border: var(--falling-text-highlighted-border-width) x solid transparent;
+
       &::before {
         content: "";
         position: absolute;
         inset: 0;
         border-radius: inherit;
-        padding: 2px;
-    
+        padding: var(--falling-text-highlighted-border-width);
+
         background: repeating-linear-gradient(
           90deg,
           var(--gray-color-0) 0,
-          var(--gray-color-0) 6px,
-          transparent 6px,
-          transparent 12px
+          var(--gray-color-0) var(--falling-text-highlighted-dash-size),
+          transparent var(--falling-text-highlighted-dash-size),
+          transparent
+            calc(
+              var(--falling-text-highlighted-dash-size) +
+                var(--falling-text-highlighted-dash-gap)
+            )
         );
-    
-        -webkit-mask:
-          linear-gradient(#000 0 0) content-box,
+
+        -webkit-mask: linear-gradient(#000 0 0) content-box,
           linear-gradient(#000 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -67,5 +83,13 @@
   @media (min-width: $desktop-breakpoint) {
     --falling-text-item-min-height: #{vw(60)};
     --falling-text-item-paddind: #{vw(20)} #{vw(40)};
+    --falling-text-highlighted-border-width: #{vw(2)};
+    --falling-text-highlighted-dash-size: #{vw(6)};
+    --falling-text-highlighted-dash-gap: #{vw(6)};
+  }
+
+  @media (max-width: $tablet-breakpoint) or (max-height: 500px) {
+    min-height: 0;
+    height: 70dvh;
   }
 }

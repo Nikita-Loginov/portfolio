@@ -1,5 +1,5 @@
 .projects {
-  --projects-inner-gap: 40px;
+  --projects-inner-gap: #{calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint)};
   --projects-btns-gap: 12px;
   --projects-items-gap: 12px;
 
@@ -34,5 +34,23 @@
     --projects-inner-gap: #{vw(40)};
     --projects-btns-gap: #{vw(12)};
     --projects-items-gap: #{vw(12)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

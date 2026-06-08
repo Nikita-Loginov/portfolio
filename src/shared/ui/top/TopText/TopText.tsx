@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import { motion } from "framer-motion";
 
 import { textContainer, textItem } from "@/shared/config/motion/variants";
@@ -7,9 +9,10 @@ import scss from "./TopText.module.scss";
 interface TopTextProps {
   animation?: boolean;
   text: string[];
+  className?: string;
 }
 
-export const TopText = ({ animation = true, text }: TopTextProps) => {
+export const TopText = ({ animation = true, text, className }: TopTextProps) => {
   const content = text.map((item, index) => (
     <motion.p key={index} className="p2" variants={textItem}>
       {item}
@@ -19,7 +22,7 @@ export const TopText = ({ animation = true, text }: TopTextProps) => {
   if (animation) {
     return (
       <motion.div
-        className={scss["top-text"]}
+        className={classNames(scss["top-text"], className)}
         variants={textContainer}
         initial="hidden"
         animate="visible"
@@ -30,7 +33,7 @@ export const TopText = ({ animation = true, text }: TopTextProps) => {
   }
 
   return (
-    <div className={scss["top-text"]}>
+    <div className={classNames(scss["top-text"], className)}>
       {text.map((item, index) => (
         <p key={index}>{item}</p>
       ))}
