@@ -31,7 +31,7 @@ export const AboutPage = () => {
             className={scss["about__content"]}
             variants={textBlockVariants}
           >
-            <TopText text={[ABOUT_INFO.desc]} />
+            <TopText text={[ABOUT_INFO.desc]} firstAsTitle/>
 
             <Hint
               icon={<Icons.CursorArrowFilledIcon />}

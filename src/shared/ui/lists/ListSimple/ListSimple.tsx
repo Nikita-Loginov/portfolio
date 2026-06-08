@@ -1,7 +1,5 @@
 import Link from "next/link";
-
 import { Button } from "../../buttons/Button/Button";
-
 import scss from "./ListSimple.module.scss";
 
 interface ListSimpleProps {
@@ -11,19 +9,30 @@ interface ListSimpleProps {
     to: string;
     ariaLabel?: string;
   }[];
+  firstAsTitle?: boolean;
 }
 
-export const ListSimple = ({ items }: ListSimpleProps) => {
+export const ListSimple = ({
+  items,
+  firstAsTitle = false,
+}: ListSimpleProps) => {
   if (items.length < 1) return;
 
   return (
     <ul className={scss["list-simple"]}>
-      {items.map((link) => {
+      {items.map((link, index) => {
+        const isFirst = index === 0;
+        const isTitle = isFirst && firstAsTitle;
+
         const content = (
-          <div className={scss['list-simple__item']}>
+          <div className={scss["list-simple__item"]}>
             <span className="icon icon--big">{link.icon}</span>
 
-            <p className="p2">{link.label}</p>
+            {isTitle ? (
+              <h1 className="p2">{link.label}</h1>
+            ) : (
+              <p className="p2">{link.label}</p>
+            )}
           </div>
         );
 

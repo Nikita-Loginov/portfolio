@@ -36,7 +36,7 @@
 
   --font-size-xxl: #{calculate-clamp(48px, 64px, $desktop-breakpoint, $lg-breakpoint)};
   --font-size-xl: 40px;
-  --font-size-lg: 32px;
+  --font-size-lg: #{calculate-clamp(20px, 32px, $tablet-breakpoint, $mobile-breakpoint)};;
   --font-size-md: #{calculate-clamp(20px, 28px, $desktop-breakpoint, $lg-breakpoint)};
   --font-size-base: #{calculate-clamp(20px, 24px, $desktop-breakpoint, $lg-breakpoint)};
   --font-size-sm: 16px;

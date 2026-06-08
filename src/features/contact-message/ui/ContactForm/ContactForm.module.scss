@@ -26,4 +26,19 @@
     --contact-form-inputs-gap: #{vw(12)};
     --contact-form-footer-gap: #{vw(12)};
   }
+
+  @media (max-width: $md-desktop-breakpoint) and (min-width: $tablet-breakpoint) {
+    &__inputs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      & > *:last-child {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --contact-form-gap: 12px;
+  }
 }

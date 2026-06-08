@@ -1,16 +1,16 @@
 .modal {
   --modal-padding: 20px;
-  --modal-inner-padding: 40px;
+  --modal-inner-padding: #{calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint)};
   --modal-inner-border-radius: var(--radius-base);
-  --modal-close-size: 40px;
-  --modal-close-icon-size: 24px;
+  --modal-close-size: #{calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint)};
+  --modal-close-icon-size: #{calculate-clamp(20px, 24px, $lg-breakpoint, $tablet-breakpoint)};
   --modal-close-top: 8px;
   --modal-close-right: 8px;
   --modal-max-width: 788px;
   --modal-max-height: 80dvh;
 
   position: fixed;
-  z-index: 1000;
+  z-index: 99999;
   inset: 0;
   padding: var(--modal-padding) var(--container-inline-padding);
   width: 100%;
@@ -30,6 +30,9 @@
     margin: auto 0;
     position: relative;
     max-height: var(--modal-max-height);
+    overflow-x: hidden;
+    overflow-y: auto;
+    @include scroll-none;
   }
 
   &__content {
@@ -83,5 +86,15 @@
     --modal-close-top: #{vw(8)};
     --modal-close-right: #{vw(8)};
     --modal-max-width: #{vw(788)};
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --modal-padding: 4px;
+
+    padding: var(--modal-padding);
+
+    &__inner {
+      max-height: calc(100dvh - var(--modal-padding) * 2);
+    }
   }
 }

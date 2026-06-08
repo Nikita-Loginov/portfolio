@@ -1,5 +1,5 @@
 .project-form {
-  --form-gap: 32px;
+  --form-gap: #{calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint)};
   --form-top-gap: 16px;
   --form-item-gap: 12px;
   --form-inputs-gap: 12px;
@@ -65,5 +65,21 @@
     --form-checks-gap: #{vw(8)};
     // --form-checks-grid-cols: repeat(4, #{vw(1)});
     --form-btns-gap: #{vw(12)};
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__checks {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__top {
+      max-width: 80%;
+    } 
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__checks {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

@@ -27,7 +27,7 @@ export const ExperiencePage = () => {
       <Container>
         <div className={scss["experience__inner"]}>
           <div className={scss["experience__content"]}>
-            <TopText text={EXPERIENCE_INFO.desc} />
+            <TopText text={EXPERIENCE_INFO.desc} firstAsTitle/>
           </div>
 
           <motion.div

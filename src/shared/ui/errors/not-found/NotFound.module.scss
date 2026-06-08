@@ -4,7 +4,7 @@
   --not-found-content-gap: 25px;
   --not-found-textbox-gap: 25px;
   --not-found-top-gap: 20px;
-  --not-found-title-fz: 200px;
+  --not-found-title-fz: #{calculate-clamp(100px, 200px, $desktop-breakpoint, $lg-breakpoint)};
 
   //   padding-bottom: calc(var(--header-height, var(--calback-header-height)) + var(--main-padding-top-no-home));;
 
@@ -89,5 +89,16 @@
     --not-found-textbox-gap: #{vw(25)};
     --not-found-top-gap: #{vw(20)};
     --not-found-title-fz: #{vw(200)};
+  }
+
+  @media (max-width:$tablet-breakpoint) {
+    &__btns {
+      align-items: normal;
+      width: 100%;
+      
+      button {
+        width: 100%;
+      }
+    }
   }
 }

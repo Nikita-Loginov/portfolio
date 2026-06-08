@@ -45,7 +45,7 @@ export const ContactsPage = () => {
           variants={cardsContainerVariants}
         >
           <motion.div variants={cardVariants} className={scss["contacts__content"]}>
-            <ListSimple items={items} />
+            <ListSimple items={items} firstAsTitle/>
 
             <div className={scss["contacts__info"]}>
               <div className={scss["contacts__text"]}>

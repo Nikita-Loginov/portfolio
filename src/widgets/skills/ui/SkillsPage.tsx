@@ -42,7 +42,7 @@ export const SkillsPage = () => {
     >
       <Container className={scss["skills__container"]}>
         <div className={scss["skills__inner"]}>
-          <TopText text={SKILLS_INFO.desc} className={scss['skills__text']}/>
+          <TopText text={SKILLS_INFO.desc} className={scss['skills__text']} firstAsTitle/>
 
           <div className={scss["skills__content"]} ref={contentRef}>
             <FallingText

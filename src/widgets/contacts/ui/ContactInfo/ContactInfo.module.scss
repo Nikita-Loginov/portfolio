@@ -24,7 +24,7 @@
     gap: var(--contact-info-card-gap);
     transition: background-color var(--transition-base),
       padding var(--transition-base);
-      width: 100%;
+    width: 100%;
 
     &--hover {
       cursor: pointer;
@@ -61,5 +61,21 @@
     --contact-info-card-info-gap: #{vw(10)};
     --contact-info-card-img-width: #{vw(150)};
     --contact-info-card-img-height: #{vw(121)};
+  }
+
+  @media ((max-width: $md-desktop-breakpoint) and (min-width: $lg-breakpoint)) or (max-height: 730px) {
+    // display: none;
+
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint){
+    // display: none;
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

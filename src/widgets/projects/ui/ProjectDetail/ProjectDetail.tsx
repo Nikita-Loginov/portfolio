@@ -1,5 +1,7 @@
 "use client";
 
+import classNames from "classnames";
+
 import { ProjectItem } from "@/shared/types/project/project.types";
 
 import { Container, TopDetail, Button, CardBorder, Modal } from "@/shared";
@@ -47,7 +49,7 @@ export const ProjectDetail = ({ project }: ProjectDetailProps) => {
               className={scss["project__top"]}
             >
               <div className={scss["project__top-box"]}>
-                <h1 className="p1">{project.nameFull}</h1>
+                <h1 className={classNames("p1", scss['project__title'])}>{project.nameFull}</h1>
 
                 <Button
                   as="link"

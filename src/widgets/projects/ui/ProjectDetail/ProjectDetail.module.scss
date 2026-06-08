@@ -107,4 +107,36 @@
     --project-support-gap: #{vw(12)};
     --project-support-btns-gap: #{vw(12)};
   }
+
+  @media (max-width: $lg-breakpoint) {
+    --project-inner-gap: 24px;
+
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__top {
+      display: flex;
+    }
+
+    &__top-box {
+      display: contents;
+    }
+
+    &__title {
+      // margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__title {
+      display: none;
+    }
+
+    &__advantages {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

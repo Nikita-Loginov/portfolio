@@ -1,7 +1,8 @@
 .contacts {
   --contacts-inner-gap: 48px;
   --contacts-content-mw: 450px;
-  --contacts-inner-gap: 24px;
+  --contacts-info-gap: 24px;
+  --contacts-content-gap: 20px;
 
   width: 100%;
 
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: var(--contacts-content-gap);
     max-width: var(--contacts-content-mw);
     width: 100%;
     position: sticky;
@@ -32,7 +33,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: var(--contacts-inner-gap);
+    gap: var(--contacts-info-gap);
   }
 
   &__container {
@@ -61,6 +62,26 @@
   @media (min-width: $desktop-breakpoint) {
     --contacts-inner-gap: #{vw(48)};
     --contacts-content-mw: #{vw(450)};
-    --contacts-inner-gap: #{vw(24)};
+    --contacts-info-gap: #{vw(24)};
+    --contacts-content-gap: #{vw(20)};
+  }
+
+  @media (max-width: $md-desktop-breakpoint) or (max-height: 730px) {
+    --contacts-content-mw: 100%;
+    --contacts-content-gap: 40px;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      position: static;
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --contacts-inner-gap: 40px;
+    --contacts-info-gap: 12px;
   }
 }

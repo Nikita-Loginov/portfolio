@@ -38,4 +38,8 @@
     --project-img-block-padding: #{vw(16)};
     --project-gallery-pagination-gap: #{vw(4)};
   }
+
+  @media (max-width: $lg-breakpoint) {
+    position: static;
+  }
 }

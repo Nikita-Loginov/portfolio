@@ -81,7 +81,7 @@ export const ProjectsPage = () => {
           {filteredProjects.length > 0 ? (
             <div className={scss["projects__items"]}>
               {filteredProjects.map((project) => {
-                return <CardProject key={project.id} item={project}/>
+                return <CardProject key={project.id} item={project} />;
               })}
             </div>
           ) : null}
