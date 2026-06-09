@@ -26,7 +26,7 @@ export const Preloader = ({ progress }: PreloaderProps) => {
 
       <div className={scss["preloader__img"]}>
         <Image
-          src={Images.BackgroundHome}
+          src={Images.BackgroundExperience}
           alt="Фотография заглушка на preloader"
           priority
           fill

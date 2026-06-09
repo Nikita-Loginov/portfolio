@@ -27,18 +27,18 @@ const CATEGORIIES: {
     label: "Лендинги",
     value: "landing",
   },
-  {
-    label: "Админ-панели",
-    value: "admin",
-  },
+  // {
+  //   label: "Админ-панели",
+  //   value: "admin",
+  // },
   {
     label: "Telegram Apps",
     value: "tg-app",
   },
-  {
-    label: "Инструменты",
-    value: "tool",
-  },
+  // {
+  //   label: "Инструменты",
+  //   value: "tool",
+  // },
 ];
 
 export const ProjectsPage = () => {

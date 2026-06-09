@@ -26,4 +26,5 @@ export interface ImgBgConfig {
   path: string;
   src: StaticImageData;
   alt: string;
+  mediaSrc?: StaticImageData
 }

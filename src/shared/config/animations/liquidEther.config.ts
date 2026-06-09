@@ -27,6 +27,7 @@ export const ImgsBg: ImgBgConfig[] = [
     path: '/',
     src: Images.BackgroundHome,
     alt: "Фотография фона для главной страницы",
+    mediaSrc: Images.BackgroundHomeMedia,
   },
   {
     path: '/about',

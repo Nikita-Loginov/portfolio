@@ -1,6 +1,8 @@
 "use client";
 
-import LiquidEther from "@/shared/ui/animations/LiquidEther/LiquidEther";
+import { useEffect, useState } from "react";
+
+// import LiquidEther from "@/shared/ui/animations/LiquidEther/LiquidEther";
 import SplashCursor from "@/shared/ui/animations/SplashCursor/SplashCursor";
 import {
   LiquidEtherConfig,
@@ -10,6 +12,7 @@ import {
 import Image from "next/image";
 
 import scss from "./PageBackground.module.scss";
+
 
 interface PageBackgroundProps {
   config: LiquidEtherConfig;
@@ -22,6 +25,29 @@ export const PageBackground = ({
   imageConfig,
   children,
 }: PageBackgroundProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 479px)");
+
+    const update = () => {
+      setIsMobile(media.matches);
+    };
+
+    update();
+
+    media.addEventListener("change", update);
+
+    return () => {
+      media.removeEventListener("change", update);
+    };
+  }, []);
+
+  const imageSrc =
+    isMobile && imageConfig.mediaSrc
+      ? imageConfig.mediaSrc
+      : imageConfig.src;
+
   return (
     <div className={scss["page-background"]}>
       <div className={scss["page-background__box"]}>
@@ -30,16 +56,18 @@ export const PageBackground = ({
       </div>
 
       <div
-        className={`${scss["page-background__img"]}`}
-        key={imageConfig.src.src}
+        className={scss["page-background__img"]}
+        key={imageSrc.src}
       >
         <Image
-          src={imageConfig.src}
+          src={imageSrc}
           alt={imageConfig.alt}
         />
       </div>
 
-      <div className={scss["page-background__inner"]}>{children}</div>
+      <div className={scss["page-background__inner"]}>
+        {children}
+      </div>
     </div>
   );
 };
