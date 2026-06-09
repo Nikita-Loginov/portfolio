@@ -93,10 +93,36 @@ export const seoConfig: Metadata = {
     siteName: `Портфолио ${SITE_CONFIG.name}`,
     locale: SITE_CONFIG.locale,
     type: "website",
-    // images: [],
+    images: [
+      {
+        url: "/images/og/preloader.webp",
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.name,
+      },
+    ],
   },
 
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_CONFIG.name} - ${SITE_CONFIG.title}`,
+    description: HOME_DESCRIPTION,
+    creator: "@frontend_developer_fsd",
+    images: ["/images/og/preloader.webp"],
+  },
+
+  authors: [
+    {
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.url,
+    },
+  ],
+
+  applicationName: SITE_CONFIG.name,
+
   keywords: KEYWORDS,
+
+  category: "portfolio",
 
   robots: isProduction
     ? {
@@ -118,6 +144,9 @@ export const seoConfig: Metadata = {
           follow: false,
         },
       },
+
+  creator: SITE_CONFIG.name,
+  publisher: SITE_CONFIG.name,
 };
 
 export function createPageMetadata(

@@ -41,6 +41,13 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        {/* <style>
+          {`
+    body:hover {
+      border-image: url("https://nikita-frontend.goatcounter.com/count?p=/");
+    }
+  `}
+        </style> */}
       </head>
       <body id="body">
         <QueryProvider>
@@ -61,6 +68,13 @@ export default function RootLayout({
             __html: JSON.stringify(combinedSchema),
           }}
         />
+
+        <Script
+          id="goatcounter"
+          data-goatcounter="https://nikita-frontend.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        ></Script>
       </body>
     </html>
   );

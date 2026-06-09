@@ -10,7 +10,7 @@ export const MainCardHome = () => {
       <p className="p2">Последний проект</p>
 
       <div className={scss["card__img"]}>
-        <Image src={Images.KarmansImg} alt="Мокап проекта Карманс" />
+        <Image src={Images.KarmansFive} alt="Мокап проекта Карманс" />
       </div>
 
       <div className={scss["card__content"]}>

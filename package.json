@@ -19,6 +19,7 @@
     "framer-motion": "^12.38.0",
     "matter-js": "^0.20.0",
     "next": "16.1.7",
+    "quill": "^2.0.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.75.0",
