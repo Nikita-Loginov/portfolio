@@ -13,7 +13,6 @@ import Image from "next/image";
 
 import scss from "./PageBackground.module.scss";
 
-
 interface PageBackgroundProps {
   config: LiquidEtherConfig;
   imageConfig: ImgBgConfig;
@@ -36,7 +35,7 @@ export const PageBackground = ({
         transparent 45%
       )
     `,
-  
+
     "--gradient-second": `
       radial-gradient(
         circle at ${config.gradient.second.position},
@@ -63,17 +62,19 @@ export const PageBackground = ({
     };
   }, []);
 
-  const imageSrc =
-    isMobile && imageConfig.mediaSrc
-      ? imageConfig.mediaSrc
-      : imageConfig.src;
+  // const imageSrc =
+  //   isMobile && imageConfig.mediaSrc
+  //     ? imageConfig.mediaSrc
+  //     : imageConfig.src;
 
   return (
     <div className={scss["page-background"]} style={gradientStyle}>
-      <div className={scss["page-background__box"]}>
-        <SplashCursor />
-        {/* <LiquidEther {...config} /> */}
-      </div>
+      {!isMobile ? (
+        <div className={scss["page-background__box"]}>
+          <SplashCursor />
+          {/* <LiquidEther {...config} /> */}
+        </div>
+      ) : null}
 
       {/* <div
         className={scss["page-background__img"]}
@@ -85,9 +86,7 @@ export const PageBackground = ({
         />
       </div> */}
 
-      <div className={scss["page-background__inner"]}>
-        {children}
-      </div>
+      <div className={scss["page-background__inner"]}>{children}</div>
     </div>
   );
 };
