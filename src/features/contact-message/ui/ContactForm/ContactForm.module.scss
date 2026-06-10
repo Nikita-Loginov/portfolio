@@ -27,7 +27,10 @@
     --contact-form-footer-gap: #{vw(12)};
   }
 
-  @media (max-width: $md-desktop-breakpoint) and (min-width: $tablet-breakpoint) {
+  @media (max-width: $md-desktop-breakpoint) or (max-height: 730px) {
+  }
+
+  @media ((max-width: $md-desktop-breakpoint) and (min-width: $tablet-breakpoint)) or ((max-height: 730px) and (min-width: $tablet-breakpoint)) {
     &__inputs {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
