@@ -35,7 +35,7 @@ export const MainSectionHome = () => {
                 className="gradient-text"
                 variants={heroGradientVariants}
               >
-                fronted-developer 3+ лет
+                fronted-developer 3+ года
               </motion.span>{" "}
               опыта
             </motion.h1>

@@ -73,7 +73,7 @@ export const ContactForm = () => {
           <Button
             typeBtn="submit"
             disabled={isPending}
-            tooltip={isPending ? "Отпрляем заявку..." : " Отправить заявку"}
+            tooltip={isPending ? "Отправляем заявку..." : " Отправить заявку"}
           >
             <p className="p2">{isPending ? "Отправляем..." : "Отправить"}</p>
           </Button>
