@@ -24,14 +24,14 @@ export const Preloader = ({ progress }: PreloaderProps) => {
         </div>
       </Container>
 
-      <div className={scss["preloader__img"]}>
+      {/* <div className={scss["preloader__img"]}>
         <Image
           src={Images.BackgroundExperience}
           alt="Фотография заглушка на preloader"
           priority
           fill
         />
-      </div>
+      </div> */}
     </section>
   );
 };

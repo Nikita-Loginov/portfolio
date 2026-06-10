@@ -95,7 +95,7 @@ export const seoConfig: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og/preloader.webp",
+        url: "/images/og/cover.webp",
         width: 1200,
         height: 630,
         alt: SITE_CONFIG.name,
@@ -108,7 +108,7 @@ export const seoConfig: Metadata = {
     title: `${SITE_CONFIG.name} - ${SITE_CONFIG.title}`,
     description: HOME_DESCRIPTION,
     creator: "@frontend_developer_fsd",
-    images: ["/images/og/preloader.webp"],
+    images: ["/images/og/cover.webp"],
   },
 
   authors: [

@@ -27,6 +27,26 @@ export const PageBackground = ({
 }: PageBackgroundProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const gradientStyle = {
+    "--gradient-first": `
+      radial-gradient(
+        circle at ${config.gradient.first.position},
+        ${config.gradient.first.color} 0%,
+        ${config.gradient.first.secondColor} 20%,
+        transparent 45%
+      )
+    `,
+  
+    "--gradient-second": `
+      radial-gradient(
+        circle at ${config.gradient.second.position},
+        ${config.gradient.second.color} 0%,
+        ${config.gradient.second.secondColor} 22%,
+        transparent 46%
+      )
+    `,
+  } as React.CSSProperties;
+
   useEffect(() => {
     const media = window.matchMedia("(max-width: 479px)");
 
@@ -49,13 +69,13 @@ export const PageBackground = ({
       : imageConfig.src;
 
   return (
-    <div className={scss["page-background"]}>
+    <div className={scss["page-background"]} style={gradientStyle}>
       <div className={scss["page-background__box"]}>
         <SplashCursor />
         {/* <LiquidEther {...config} /> */}
       </div>
 
-      <div
+      {/* <div
         className={scss["page-background__img"]}
         key={imageSrc.src}
       >
@@ -63,7 +83,7 @@ export const PageBackground = ({
           src={imageSrc}
           alt={imageConfig.alt}
         />
-      </div>
+      </div> */}
 
       <div className={scss["page-background__inner"]}>
         {children}

@@ -2,6 +2,8 @@
   --projects-inner-gap: #{calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint)};
   --projects-btns-gap: 12px;
   --projects-items-gap: 12px;
+  --projects-empty-padding: 40px;
+  --projects-empty-min-height: 200px;
 
   width: 100%;
 
@@ -30,10 +32,27 @@
     gap: var(--projects-items-gap);
   }
 
+  &__empty {
+    grid-column: 1 / -1;
+   
+  }
+
+  &__empty-box {
+    padding: var(--projects-empty-padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: var(--projects-empty-min-height);
+    width: 100%;
+  }
+
   @media (min-width: $desktop-breakpoint) {
     --projects-inner-gap: #{vw(40)};
     --projects-btns-gap: #{vw(12)};
     --projects-items-gap: #{vw(12)};
+    --projects-empty-padding: #{vw(40)};
+    --projects-empty-min-height: #{vw(200)};
   }
 
   @media (max-width: $md-desktop-breakpoint) {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-import { Container, Button, CardProject } from "@/shared";
+import { Container, Button, CardProject, CardBorder } from "@/shared";
 
 import { PROJECTS_ITEMS } from "@/shared/config/project/projects-items.config";
 
@@ -83,6 +83,12 @@ export const ProjectsPage = () => {
               {filteredProjects.map((project) => {
                 return <CardProject key={project.id} item={project} />;
               })}
+
+              <CardBorder className={scss["projects__empty"]}>
+                <div className={scss["projects__empty-box"]}>
+                  <p className="p1">Тут не все проекты, я их наполняю по-тихоньку</p>
+                </div>
+              </CardBorder>
             </div>
           ) : null}
         </div>

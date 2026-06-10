@@ -1,5 +1,16 @@
 import { StaticImageData } from "next/image";
 
+export interface GradientOrb {
+  color: string;
+  position: string;
+  secondColor?: string;
+}
+
+export interface BackgroundGradientConfig {
+  first: GradientOrb;
+  second: GradientOrb;
+}
+
 export interface LiquidEtherConfig {
   mouseForce?: number;
   cursorSize?: number;
@@ -20,6 +31,7 @@ export interface LiquidEtherConfig {
   takeoverDuration?: number;
   autoResumeDelay?: number;
   autoRampDuration?: number;
+  gradient: BackgroundGradientConfig;
 }
 
 export interface ImgBgConfig {
