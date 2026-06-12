@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import classNames from "classnames";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { Container, Button, CardProject, CardBorder } from "@/shared";
 
@@ -79,17 +80,29 @@ export const ProjectsPage = () => {
           </div>
 
           {filteredProjects.length > 0 ? (
-            <div className={scss["projects__items"]}>
-              {filteredProjects.map((project) => {
-                return <CardProject key={project.id} item={project} />;
-              })}
-
-              <CardBorder className={scss["projects__empty"]}>
-                <div className={scss["projects__empty-box"]}>
-                  <p className="p1">Тут не все проекты, я их наполняю по-тихоньку</p>
-                </div>
-              </CardBorder>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeFilter}
+                className={scss["projects__items"]}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.25 }}
+              >
+                {filteredProjects.map((project) => (
+                  <motion.div
+                    key={project.id}
+                    layout
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <CardProject item={project} />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
           ) : null}
         </div>
       </Container>

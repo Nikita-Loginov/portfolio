@@ -390,12 +390,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
 
     category: ["tg-app"],
 
-    developerTools: [
-      "React",
-      "TypeScript",
-      "Telegram API",
-      "SPA",
-    ],
+    developerTools: ["React", "TypeScript", "Telegram API", "SPA"],
 
     imgs: [
       Images.VikrfOne,
@@ -408,6 +403,209 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
       Images.VikrfEight,
       Images.VikrfNine,
       Images.VikrfTenOne,
+    ],
+  },
+
+  {
+    id: "anstmirr",
+    slug: "anstmirr",
+    name: "Digital-проект Anstmirr",
+    development: false,
+
+    nameFull: "Anstmirr",
+
+    description: [
+      "Anstmirr — самостоятельный digital-проект в рамках коммерческой веб-разработки, представляющий собой визуально насыщенный многостраничный сайт с акцентом на контентную подачу и интерактивный пользовательский опыт.",
+
+      "Проект ориентирован на презентацию бренда и контента через современный интерфейс с анимациями, медиа-элементами и структурированной навигацией. Основной фокус — визуальная динамика, работа с большим количеством контента и плавные пользовательские сценарии.",
+    ],
+
+    link: "https://frog-studios.com/portfolio/anstmirr",
+
+    tasks: [
+      "разработать интернет-магазин на 1С-Битрикс с полной e-commerce функциональностью",
+      "реализовать каталог товаров с фильтрацией по размеру, цвету и коллекции",
+      "разработать раздел коллекций с имиджевой презентацией товаров",
+      "создать личный кабинет пользователя (история заказов, избранное, профиль)",
+      "реализовать страницы бренда, доставки и оплаты",
+      "внедрить функционал избранного",
+      "обеспечить соответствие интерфейса фирменному стилю бренда",
+    ],
+
+    industry: ["digital products", "web experience", "frontend development"],
+
+    myTasks: [
+      "разработал frontend интернет-магазина на HTML, SCSS и JavaScript в связке с 1С-Битрикс",
+      "реализовал адаптивную верстку каталога товаров с поддержкой фильтрации и сортировки",
+      "разработал UI для карточек товаров, коллекций и списков товаров",
+      "реализовал интерактивные фильтры (размер, цвет, коллекция)",
+      "создал интерфейс личного кабинета пользователя (заказы, избранное, профиль)",
+      "реализовал функционал избранного на клиентской стороне",
+      "интегрировал frontend с шаблонной системой Bitrix",
+      "настроил структуру страниц магазина (каталог, карточка товара, бренд, доставка, оплата)",
+      "подключил и адаптировал JavaScript-библиотеки для UI-компонентов и интерактивности",
+      "оптимизировал работу каталога и производительность при большом количестве товаров",
+    ],
+
+    advantages: [
+      {
+        icon: <Icons.ClockIcon />,
+        text: "3 месяца",
+      },
+      {
+        icon: <Icons.CodeIcon />,
+        text: "HTML, JavaScript, Gulp",
+      },
+      {
+        icon: <Icons.PaletteIcon />,
+        text: "SCSS, адаптивная верстка, анимации",
+      },
+      {
+        icon: <Icons.CheckCircleIcon />,
+        text: "Разработка интерактивного digital-сайта",
+      },
+    ],
+
+    seo: {
+      title: "Anstmirr — разработка интерактивного digital-сайта",
+
+      description:
+        "Frontend-разработка проекта Anstmirr: адаптивная верстка, интерактивные элементы, анимации и работа с мультимедийным контентом.",
+
+      keywords: [
+        "frontend разработка",
+        "html css javascript",
+        "gulp сборка",
+        "интерактивный сайт",
+        "digital проект",
+        "анимации на сайте",
+        "frontend портфолио",
+        "многостраничный сайт",
+      ],
+
+      image: "/images/projects/anstmirr/cover.webp",
+      ogImage: "/images/projects/anstmirr/og.webp",
+    },
+
+    category: ["site"],
+
+    developerTools: ["HTML", "SCSS", "JavaScript", "Gulp", "Bitrix"],
+
+    imgs: [
+      Images.AnstmirrOne,
+      Images.AnstmirrTwo,
+      Images.AnstmirrThree,
+      Images.AnstmirrFour,
+      Images.AnstmirrFive,
+      Images.AnstmirrSix,
+      Images.AnstmirrSeven,
+      Images.AnstmirrEight,
+      Images.AnstmirrNine,
+    ],
+  },
+
+  {
+    id: "drevoplace",
+    slug: "drevoplace",
+    name: "Интернет-магазин DrevoPlace",
+    development: false,
+
+    nameFull: "DrevoPlace — eCommerce проект",
+
+    description: [
+      "DrevoPlace — интернет-магазин с гибридной frontend-архитектурой на Vue.js и JavaScript внутри CMS 1С-Битрикс. Проект включает пользовательскую часть магазина, интерактивный каталог, корзину и административные сценарии работы с данными.",
+
+      "Frontend-разработка была сфокусирована на создании интерактивного интерфейса, логики корзины и динамических компонентов поверх готовой серверной CMS-структуры.",
+    ],
+
+    link: "https://drevoplace.ru/",
+
+    tasks: [
+      "разработать frontend-часть интернет-магазина с использованием Vue.js и JavaScript",
+      "реализовать кастомную корзину с полной клиентской логикой",
+      "создать интерактивный каталог товаров с динамическими UI-обновлениями",
+      "разработать пользовательские сценарии добавления и управления товарами в корзине",
+      "обеспечить адаптивную верстку ключевых страниц интернет-магазина",
+      "реализовать взаимодействие frontend-логики с API и данными CMS",
+    ],
+
+    industry: ["e-commerce", "retail"],
+
+    myTasks: [
+      "разработал frontend интернет-магазина на HTML, SCSS, JavaScript и Vue.js",
+      "реализовал модуль расчёта доставки в корзине с интерактивной картой",
+      "реализовал пересчёт стоимости доставки в зависимости от выбранной точки на карте",
+      "связывал данные геолокации с логикой корзины и итоговой стоимостью заказа",
+      "реализовал адаптивную верстку ключевых страниц интернет-магазина",
+      "реализовал кастомную корзину полностью на клиентской стороне (добавление, удаление, изменение количества товаров)",
+      "разработал интерактивный каталог товаров с динамическими обновлениями интерфейса",
+      "реализовал Vue-компоненты для отдельных частей интерфейса (каталог, корзина, UI-блоки)",
+      "написал клиентскую логику управления состоянием корзины без перезагрузки страницы",
+      "оптимизировал работу интерфейса при большом количестве пользовательских действий и данных",
+    ],
+
+    advantages: [
+      {
+        icon: <Icons.ClockIcon />,
+        text: "4 месяца",
+      },
+      {
+        icon: <Icons.CodeIcon />,
+        text: "Vue.js, JavaScript, HTML, SCSS",
+      },
+      {
+        icon: <Icons.PaletteIcon />,
+        text: "Frontend поверх CMS (без ответственности за Bitrix-натяжку)",
+      },
+      {
+        icon: <Icons.CheckCircleIcon />,
+        text: "Интерактивный eCommerce frontend",
+      },
+    ],
+
+    seo: {
+      title: "DrevoPlace — frontend разработка интернет-магазина",
+
+      description:
+        "Frontend-разработка интернет-магазина DrevoPlace: Vue.js, JavaScript, кастомная корзина, каталог товаров и интерактивный eCommerce интерфейс.",
+
+      keywords: [
+        "vue js ecommerce",
+        "frontend разработка магазина",
+        "javascript корзина",
+        "custom cart",
+        "frontend developer",
+        "интернет магазин frontend",
+        "vue components",
+        "каталог товаров",
+        "ecommerce frontend",
+      ],
+
+      image: "/images/projects/drevoplace/cover.webp",
+      ogImage: "/images/projects/drevoplace/og.webp",
+    },
+
+    category: ["site"],
+
+    developerTools: ["Vue.js", "JavaScript", "HTML", "SCSS", "Bitrix"],
+
+    imgs: [
+      Images.DrevoplaceOne,
+      Images.DrevoplaceTwo,
+      Images.DrevoplaceThree,
+      Images.DrevoplaceFour,
+      Images.DrevoplaceFive,
+      Images.DrevoplaceSix,
+      Images.DrevoplaceSeven,
+      Images.DrevoplaceEight,
+      Images.DrevoplaceNine,
+      Images.DrevoplaceTenOne,
+      Images.DrevoplaceTenTwo,
+      Images.DrevoplaceTenThree,
+      Images.DrevoplaceTenFour,
+      Images.DrevoplaceTenFive,
+      Images.DrevoplaceTenSix,
+      Images.DrevoplaceTenSeven,
     ],
   },
 ];

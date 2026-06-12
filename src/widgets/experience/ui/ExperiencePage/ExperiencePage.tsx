@@ -2,6 +2,7 @@
 
 import classNames from "classnames";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import {
   cardsContainerVariants,
@@ -17,8 +18,6 @@ import { formatPeriod, getPeriodDuration } from "@/shared/utils";
 
 import { Icons } from "@/shared/icons";
 
-import { EXPERIENCE_INFO } from "@/shared/config/about";
-
 import scss from "./ExperiencePage.module.scss";
 
 export const ExperiencePage = () => {
@@ -27,7 +26,41 @@ export const ExperiencePage = () => {
       <Container>
         <div className={scss["experience__inner"]}>
           <div className={scss["experience__content"]}>
-            <TopText text={EXPERIENCE_INFO.desc} firstAsTitle/>
+            <div className={scss["experience__textbox"]}>
+              <p className="p2">
+                Последние полтора года я параллельно
+                развиваю практику как независимый разработчик,
+                участвую в создании и запуске коммерческих и продуктовых
+                проектов в формате фриланс-сотрудничества. Подробнее с услугами
+                можно ознакомиться на{" "}
+                <Link
+                  href={SOCIALS_CONFIG.kwork}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Перейти на страницу Kwork"
+                >
+                  Kwork
+                </Link>
+                .
+              </p>
+
+              <p className="p2">
+                Параллельно я работаю в связке с SEO-специалистом{" "}
+                <Link
+                  href="https://dkolesnikof.ru/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Перейти на сайт Дениса Колесникова"
+                >
+                  Денисом Колесниковым
+                </Link>
+                . Он имеет опыт работы с продуктами уровня <strong>Ozon</strong>
+                , <strong>VK</strong>, <strong>Юла</strong> и{" "}
+                <strong>Альфа-Банк</strong>. Сейчас мы совместно разрабатываем и
+                развиваем цифровые продукты, объединяя инженерный подход и
+                SEO-экспертизу для роста и масштабирования проектов.
+              </p>
+            </div>
           </div>
 
           <motion.div

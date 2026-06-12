@@ -57,6 +57,33 @@ import VikrfEight from "./projects/vikrf/VikrfEight.webp";
 import VikrfNine from "./projects/vikrf/VikrfNine.webp";
 import VikrfTenOne from "./projects/vikrf/VikrfTenOne.webp";
 
+import AnstmirrOne from "./projects/anstmirr/AnstmirrOne.webp";
+import AnstmirrTwo from "./projects/anstmirr/AnstmirrTwo.webp";
+import AnstmirrThree from "./projects/anstmirr/AnstmirrThree.webp";
+import AnstmirrFour from "./projects/anstmirr/AnstmirrFour.webp";
+import AnstmirrFive from "./projects/anstmirr/AnstmirrFive.webp";
+import AnstmirrSix from "./projects/anstmirr/AnstmirrSix.webp";
+import AnstmirrSeven from "./projects/anstmirr/AnstmirrSeven.webp";
+import AnstmirrEight from "./projects/anstmirr/AnstmirrEight.webp";
+import AnstmirrNine from "./projects/anstmirr/AnstmirrNine.webp";
+
+import DrevoplaceOne from "./projects/drevoplace/DrevoplaceOne.webp";
+import DrevoplaceTwo from "./projects/drevoplace/DrevoplaceTwo.webp";
+import DrevoplaceThree from "./projects/drevoplace/DrevoplaceThree.webp";
+import DrevoplaceFour from "./projects/drevoplace/DrevoplaceFour.webp";
+import DrevoplaceFive from "./projects/drevoplace/DrevoplaceFive.webp";
+import DrevoplaceSix from "./projects/drevoplace/DrevoplaceSix.webp";
+import DrevoplaceSeven from "./projects/drevoplace/DrevoplaceSeven.webp";
+import DrevoplaceEight from "./projects/drevoplace/DrevoplaceEight.webp";
+import DrevoplaceNine from "./projects/drevoplace/DrevoplaceNine.webp";
+import DrevoplaceTenOne from "./projects/drevoplace/DrevoplaceTenOne.webp";
+import DrevoplaceTenTwo from "./projects/drevoplace/DrevoplaceTenTwo.webp";
+import DrevoplaceTenThree from "./projects/drevoplace/DrevoplaceTenThree.webp";
+import DrevoplaceTenFour from "./projects/drevoplace/DrevoplaceTenFour.webp";
+import DrevoplaceTenFive from "./projects/drevoplace/DrevoplaceTenFive.webp";
+import DrevoplaceTenSix from "./projects/drevoplace/DrevoplaceTenSix.webp";
+import DrevoplaceTenSeven from "./projects/drevoplace/DrevoplaceTenSeven.webp";
+
 import Computer from "./decors/computer.webp";
 import Lightning from "./decors/lightning.webp";
 import Geo from "./decors/geo.webp";
@@ -121,6 +148,33 @@ export const Images = {
   VikrfEight,
   VikrfNine,
   VikrfTenOne,
+
+  AnstmirrOne,
+  AnstmirrTwo,
+  AnstmirrThree,
+  AnstmirrFour,
+  AnstmirrFive,
+  AnstmirrSix,
+  AnstmirrSeven,
+  AnstmirrEight,
+  AnstmirrNine,
+
+  DrevoplaceOne,
+  DrevoplaceTwo,
+  DrevoplaceThree,
+  DrevoplaceFour,
+  DrevoplaceFive,
+  DrevoplaceSix,
+  DrevoplaceSeven,
+  DrevoplaceEight,
+  DrevoplaceNine,
+  DrevoplaceTenOne,
+  DrevoplaceTenTwo,
+  DrevoplaceTenThree,
+  DrevoplaceTenFour,
+  DrevoplaceTenFive,
+  DrevoplaceTenSix,
+  DrevoplaceTenSeven,
 
   Computer,
   Lightning,

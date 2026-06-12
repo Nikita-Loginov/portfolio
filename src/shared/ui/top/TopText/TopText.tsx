@@ -7,7 +7,7 @@ interface TopTextProps {
   animation?: boolean;
   text: string[];
   className?: string;
-  firstAsTitle?: boolean; // пропс для превращения первого элемента в h1
+  firstAsTitle?: boolean;
 }
 
 export const TopText = ({
