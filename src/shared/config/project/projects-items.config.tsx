@@ -592,7 +592,7 @@ export const PROJECTS_ITEMS: ProjectItem[] = [
     imgs: [
       Images.DrevoplaceOne,
       Images.DrevoplaceTwo,
-      Images.DrevoplaceThree,
+      // Images.DrevoplaceThree,
       Images.DrevoplaceFour,
       Images.DrevoplaceFive,
       Images.DrevoplaceSix,
