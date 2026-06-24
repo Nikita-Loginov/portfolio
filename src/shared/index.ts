@@ -27,5 +27,6 @@ export * from "./ui/swiper/Swiper";
 export * from "./ui/computer/Computer";
 export * from "./ui/modal/Modal";
 export * from "./ui/checks/Check";
+// export * from './ui/scrollTop/ScrollTop'
 
 export * from "./providers/PreloaderProvider/PreloaderProvider";

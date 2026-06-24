@@ -11,6 +11,8 @@ export const QueryProvider = ({ children }: { children: React.ReactNode }) => {
           queries: {
             staleTime: 5000 * 60,
             refetchOnWindowFocus: false,
+            enabled: typeof window !== 'undefined',
+            retry: false,
           },
         },
       })

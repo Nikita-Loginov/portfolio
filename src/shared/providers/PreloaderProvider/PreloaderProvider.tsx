@@ -24,6 +24,8 @@ export const PreloaderProvider = ({
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     let rafId: number;
     let interval: NodeJS.Timeout;
   

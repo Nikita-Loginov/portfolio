@@ -11,8 +11,10 @@ import {
 
 import { QueryProvider } from "@/shared/providers/QueryProvider/QueryProvider";
 import { ModalProvider } from "@/shared/providers/ModalProvider/ModalProvider";
+// import { ScrollTop } from "@/shared";
 
 import "./styles/global.scss";
+import { ScrollTop } from "@/shared/ui/scrollTop/ScrollTop";
 
 export const metadata: Metadata = seoConfig;
 
@@ -55,6 +57,8 @@ export default function RootLayout({
             <ModalProvider>{children}</ModalProvider>
 
             <Toaster position="top-right" />
+
+            <ScrollTop />
 
             <div id="modal-root"></div>
           </PreloaderProvider>
