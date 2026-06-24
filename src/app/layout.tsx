@@ -29,6 +29,7 @@ export default function RootLayout({
     <html lang="ru-RU">
       <head>
         <meta name="theme-color" content="#28212f" />
+        <meta name="google-site-verification" content="ht_6l17oLgFr6PE0EX6qDpQe_6M5cyTvQvEiPiBx9fw" />
         <link
           rel="preload"
           href="/fonts/digital_dreams_kew_narrow.woff2"
