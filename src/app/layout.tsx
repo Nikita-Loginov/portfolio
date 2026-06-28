@@ -57,7 +57,7 @@ export default function RootLayout({
         <QueryProvider>
           <PreloaderProvider>
             <ModalProvider>{children}</ModalProvider>
-
+ 
             <Toaster position="top-right" />
 
             <ScrollTop />
