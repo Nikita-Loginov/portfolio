@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const SITE_CONFIG = {
   name: "Логинов Никита",
   title: "Frontend Developer",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://nikita-loginov.ru",
+  url: "https://frontent-nikita.vercel.app",
   locale: "ru_RU",
 } as const;
 
